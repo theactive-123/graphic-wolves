@@ -67,6 +67,11 @@ const organizationSchema = {
   name: "Graphic Wolves",
   description:
     "Creative agency for branding, development and e-commerce.",
+  sameAs: [
+    "https://www.facebook.com/graphicwolves",
+    "https://www.instagram.com/graphic_wolves",
+    "https://x.com/graphicwolves",
+  ],
 };
 
 export default function RootLayout({

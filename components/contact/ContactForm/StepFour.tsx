@@ -1,9 +1,7 @@
 import styles from "./StepFour.module.css";
 
 export default function StepFour() {
-  const calendlyUrl =
-    process.env.NEXT_PUBLIC_CALENDLY_URL ||
-    "https://calendly.com/yourusername/30min";
+  const calendlyUrl = "https://calendly.com/traheel05/30min";
 
   return (
     <div className={styles.wrap}>

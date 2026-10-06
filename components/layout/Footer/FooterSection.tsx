@@ -45,19 +45,19 @@ const menuItems = [
 
 const socials = [
   {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/",
-    icon: "/images/footer/linkedin.svg",
+    label: "Facebook",
+    href: "https://www.facebook.com/graphicwolves",
+    icon: "/images/footer/meta.svg",
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/graphic_wolves",
     icon: "/images/footer/instagram.svg",
   },
   {
-    label: "Meta",
-    href: "https://www.facebook.com/",
-    icon: "/images/footer/meta.svg",
+    label: "X",
+    href: "https://x.com/graphicwolves",
+    icon: "/images/footer/x.svg",
   },
 ];
 
