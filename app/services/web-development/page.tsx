@@ -1,5 +1,6 @@
 // app/services/web-development/page.tsx
 
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header/Header";
 import WebDevelopmentHero from "@/components/services/web-development/WebDevelopmentHero/WebDevelopmentHero";
 import TrustedCompaniesSection from "@/components/services/web-development/TrustedCompaniesSection/TrustedCompaniesSection";
@@ -9,6 +10,14 @@ import SmartIntegrationsSection from "@/components/services/web-development/Smar
 import FeaturedWorkSection from "@/components/services/web-development/FeaturedWorkSection/FeaturedWorkSection";
 import FooterSection from "@/components/layout/Footer/FooterSection";
 import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
+
+export const metadata: Metadata = {
+  title: "Web Development Services",
+  description:
+    "Get a fast, scalable website built for your business. Graphic Wolves delivers custom web development, integrations, and digital experiences designed to perform.",
+  alternates: { canonical: "/services/web-development" },
+};
+
 export default function WebDevelopmentPage() {
   return (
     <main>
