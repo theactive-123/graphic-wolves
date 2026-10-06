@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header/Header";
 import ContactHero from "@/components/contact/ContactHero/ContactHero";
 import ContactForm from "@/components/contact/ContactForm/ContactForm";
+import ContactDetails from "@/components/contact/ContactDetails/ContactDetails";
 import StatsSection from "@/components/home/StatsSection/StatsSection";
 import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
 import ProudClientsSection from "@/components/home/ProudClientsSection/ProudClientsSection";
@@ -19,6 +20,7 @@ export default function ContactPage() {
       <Header />
       <ContactHero />
       <ContactForm />
+      <ContactDetails />
       <StatsSection />
       <ReviewsSection />
       <ProudClientsSection />
