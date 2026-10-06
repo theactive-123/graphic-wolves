@@ -393,7 +393,7 @@ export default function Hero() {
               <span className={styles.wordInner}>team</span>
             </span>
 
-            <span className={styles.eyesMask} aria-label="eyes">
+            <span className={styles.eyesMask} aria-hidden="true">
               <span className={styles.eyes} aria-hidden="true">
                 <span ref={leftEyeRef} className={styles.eye}>
                   <span className={styles.pupil} />
