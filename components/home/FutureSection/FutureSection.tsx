@@ -359,6 +359,10 @@ export default function FutureSection() {
       <img
         src="/images/future/ellipse-3.webp"
         alt=""
+        width={240}
+        height={240}
+        loading="lazy"
+        decoding="async"
       />
     </div>
 
@@ -382,6 +386,10 @@ export default function FutureSection() {
                 src="/images/future/heading-sticker.svg"
                 alt=""
                 aria-hidden="true"
+                width={120}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className={styles.headingSticker}
                 data-heading-sticker
               />
@@ -420,6 +428,10 @@ export default function FutureSection() {
             src="/images/future/bg-vector.svg"
             alt=""
             aria-hidden="true"
+            width={760}
+            height={520}
+            loading="lazy"
+            decoding="async"
             className={styles.backgroundVector}
           />
 
@@ -438,6 +450,10 @@ export default function FutureSection() {
               <img
                 src="/images/future/card-1.webp"
                 alt="Graphic Wolves branding project"
+                width={400}
+                height={340}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -457,6 +473,10 @@ export default function FutureSection() {
               <img
                 src="/images/future/card-2.webp"
                 alt="Graphic Wolves e-commerce project"
+                width={400}
+                height={340}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -476,6 +496,10 @@ export default function FutureSection() {
               <img
                 src="/images/future/card-3.webp"
                 alt="Graphic Wolves creative digital project"
+                width={400}
+                height={340}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -495,6 +519,10 @@ export default function FutureSection() {
               <img
                 src="/images/future/card-4.webp"
                 alt="Graphic Wolves development project"
+                width={400}
+                height={340}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

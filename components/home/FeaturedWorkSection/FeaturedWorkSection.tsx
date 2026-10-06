@@ -68,9 +68,13 @@ const workImages = {
 function CycleImage({
   images,
   interval = 3500,
+  width = 400,
+  height = 300,
 }: {
   images: string[];
   interval?: number;
+  width?: number;
+  height?: number;
 }) {
   const [active, setActive] = useState(0);
 
@@ -96,6 +100,10 @@ function CycleImage({
           src={src}
           alt=""
           draggable={false}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
           className={`${styles.cycleImage} ${
             active === index
               ? styles.activeImage
@@ -182,6 +190,8 @@ export default function FeaturedWorkSection() {
                 .topLeftVertical
             }
             interval={3200}
+            width={330}
+            height={395}
           />
         </div>
 
@@ -200,6 +210,8 @@ export default function FeaturedWorkSection() {
                 .topLeftHorizontal
             }
             interval={3700}
+            width={360}
+            height={205}
           />
         </div>
 
@@ -208,6 +220,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/badges/branding.svg"
           alt="Branding"
+          width={160}
+          height={56}
+          loading="lazy"
+          decoding="async"
           className={`${styles.badge} ${styles.brandingBadge}`}
         />
 
@@ -242,6 +258,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/vectors/green-shape.svg"
           alt=""
+          width={270}
+          height={170}
+          loading="lazy"
+          decoding="async"
           className={
             styles.greenShape
           }
@@ -259,6 +279,8 @@ export default function FeaturedWorkSection() {
               workImages.topRight
             }
             interval={4100}
+            width={380}
+            height={250}
           />
         </div>
 
@@ -267,6 +289,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/badges/ecommerce.svg"
           alt="E-Commerce"
+          width={175}
+          height={56}
+          loading="lazy"
+          decoding="async"
           className={`${styles.badge} ${styles.ecommerceBadge}`}
         />
 
@@ -284,6 +310,8 @@ export default function FeaturedWorkSection() {
               workImages.middleTop
             }
             interval={3600}
+            width={340}
+            height={245}
           />
         </div>
 
@@ -301,6 +329,8 @@ export default function FeaturedWorkSection() {
               workImages.middleBottom
             }
             interval={4300}
+            width={330}
+            height={260}
           />
         </div>
 
@@ -309,6 +339,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/vectors/green-small.svg"
           alt=""
+          width={95}
+          height={95}
+          loading="lazy"
+          decoding="async"
           className={
             styles.greenSmall
           }
@@ -321,6 +355,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/vectors/purple-shape.svg"
           alt=""
+          width={390}
+          height={220}
+          loading="lazy"
+          decoding="async"
           className={
             styles.purpleShape
           }
@@ -338,6 +376,8 @@ export default function FeaturedWorkSection() {
               workImages.bottomLeft
             }
             interval={3850}
+            width={390}
+            height={280}
           />
         </div>
 
@@ -346,6 +386,10 @@ export default function FeaturedWorkSection() {
         <img
           src="/images/featured/badges/webdev.svg"
           alt="Web Development"
+          width={155}
+          height={56}
+          loading="lazy"
+          decoding="async"
           className={`${styles.badge} ${styles.webdevBadge}`}
         />
 
@@ -364,6 +408,8 @@ export default function FeaturedWorkSection() {
                 .bottomRightTop
             }
             interval={4000}
+            width={365}
+            height={265}
           />
         </div>
 
@@ -405,6 +451,8 @@ export default function FeaturedWorkSection() {
                 .bottomRightBottom
             }
             interval={4550}
+            width={430}
+            height={250}
           />
         </div>
         </div>

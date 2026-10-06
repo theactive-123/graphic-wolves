@@ -643,7 +643,11 @@ export default function ProudClientsSection() {
                   alt={
                     client.alt
                   }
+                  width={180}
+                  height={90}
                   draggable={false}
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             )
