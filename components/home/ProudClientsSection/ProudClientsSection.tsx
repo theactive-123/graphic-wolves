@@ -246,23 +246,11 @@ export default function ProudClientsSection() {
     const render = () => {
       rafId = null;
 
-      const rect =
-        section.getBoundingClientRect();
-
-      const viewportHeight =
-        window.innerHeight;
-
-      /*
-        Sticky stage ke andar kitna actual
-        scroll available hai.
-      */
-
-      const scrollDistance =
-        Math.max(
-          section.offsetHeight -
-            viewportHeight,
-          1
-        );
+      const rect = section.getBoundingClientRect();
+      const scrollDistance = Math.max(
+        section.offsetHeight - window.innerHeight,
+        1
+      );
 
       /* =====================================
          RAW PROGRESS

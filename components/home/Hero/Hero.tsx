@@ -358,6 +358,8 @@ export default function Hero() {
             ref={loaderLogoRef}
             src="/images/graphic-logo.svg"
             alt=""
+            width={290}
+            height={64}
             className={styles.loaderLogo}
             fetchPriority="high"
           />

@@ -288,18 +288,11 @@ export default function FooterSection() {
     const render = () => {
       rafId = null;
 
-      const rect =
-        section.getBoundingClientRect();
-
-      const viewportHeight =
-        window.innerHeight;
-
-      const scrollDistance =
-        Math.max(
-          section.offsetHeight -
-            viewportHeight,
-          1
-        );
+      const rect = section.getBoundingClientRect();
+      const scrollDistance = Math.max(
+        section.offsetHeight - window.innerHeight,
+        1
+      );
 
       /* =====================================
          RAW PROGRESS
@@ -562,6 +555,7 @@ export default function FooterSection() {
 
     window.addEventListener("scroll", scheduleRender, { passive: true });
     window.addEventListener("lenis-scroll", scheduleRender, { passive: true });
+    window.addEventListener("resize", scheduleRender);
 
     /* =====================================================
        START LOOP
@@ -576,6 +570,7 @@ export default function FooterSection() {
     return () => {
       window.removeEventListener("scroll", scheduleRender);
       window.removeEventListener("lenis-scroll", scheduleRender);
+      window.removeEventListener("resize", scheduleRender);
 
       if (rafId !== null) {
         cancelAnimationFrame(rafId);
@@ -691,7 +686,11 @@ export default function FooterSection() {
               <img
                 src="/images/footer/meeting-logo.svg"
                 alt="Book a Meeting"
+                width={174}
+                height={211}
                 draggable={false}
+                loading="lazy"
+                decoding="async"
               />
             </a>
 
@@ -776,10 +775,14 @@ export default function FooterSection() {
               <img
                 src="/images/footer/graphic-wolves-logo.svg"
                 alt="Graphic Wolves"
+                width={402}
+                height={54}
                 className={
                   styles.footerLogo
                 }
                 draggable={false}
+                loading="lazy"
+                decoding="async"
               />
 
               <p
@@ -955,7 +958,11 @@ export default function FooterSection() {
                             social.icon
                           }
                           alt=""
+                          width={42}
+                          height={41}
                           draggable={false}
+                          loading="lazy"
+                          decoding="async"
                         />
                       </a>
                     )
