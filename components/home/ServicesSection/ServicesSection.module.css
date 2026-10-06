@@ -6,7 +6,6 @@
   position: relative;
 
   width: 100%;
-  min-height: 100vh;
 
   /*
     Negative margin makes the black panel
@@ -14,14 +13,22 @@
   */
   margin-top: -12vh;
 
+  z-index: 40;
+}
+
+
+.panel {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
   padding: 150px 24px 80px;
 
   background: #1a1a1a;
   color: #ffffff;
 
   overflow: hidden;
-
-  z-index: 40;
 
   transform-origin: top center;
 
@@ -103,6 +110,11 @@
   will-change:
     transform,
     opacity;
+}
+
+
+.cardParallax {
+  width: 100%;
 }
 
 
@@ -370,7 +382,7 @@
 
 @media (min-width: 1600px) {
 
-  .servicesSection {
+  .panel {
     padding-top: 160px;
   }
 
@@ -408,7 +420,9 @@
 
   .servicesSection {
     margin-top: -8vh;
+  }
 
+  .panel {
     padding:
       120px
       22px
@@ -498,9 +512,12 @@
 @media (max-width: 767px) {
 
   .servicesSection {
-    min-height: auto;
-
     margin-top: -40px;
+  }
+
+
+  .panel {
+    min-height: auto;
 
     padding:
       90px
@@ -614,6 +631,7 @@
 @media (prefers-reduced-motion: reduce) {
 
   .servicesSection,
+  .panel,
   .cardShell,
   .serviceCard,
   .cardIcon {

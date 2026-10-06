@@ -2,17 +2,10 @@
 
 import {
   useEffect,
-  useLayoutEffect,
-  useRef,
   useState,
 } from "react";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import styles from "./FeaturedWorkSection.module.css";
-
-gsap.registerPlugin(ScrollTrigger);
 
 /* =========================================================
    IMAGE ARRAYS
@@ -119,479 +112,24 @@ function CycleImage({
 ========================================================= */
 
 export default function FeaturedWorkSection() {
-  const sectionRef =
-    useRef<HTMLElement>(null);
-
-  const headingRef =
-    useRef<HTMLHeadingElement>(null);
-
-  const headingLineRef =
-    useRef<SVGPathElement>(null);
-
-  const middleSwirlRef =
-    useRef<SVGSVGElement>(null);
-
-  const middleLineRef =
-    useRef<SVGPathElement>(null);
-
-  const bottomSwirlRef =
-    useRef<SVGSVGElement>(null);
-
-  const bottomLineRef =
-    useRef<SVGPathElement>(null);
-
-  /* =======================================================
-     TADA LOOP
-  ======================================================= */
-
-  const startTada = (
-    badge: HTMLElement,
-    index: number
-  ) => {
-    if (
-      badge.dataset.tadaStarted ===
-      "true"
-    ) {
-      return;
-    }
-
-    badge.dataset.tadaStarted =
-      "true";
-
-    gsap
-      .timeline({
-        repeat: -1,
-
-        repeatDelay:
-          2.8 +
-          index * 0.55,
-      })
-
-      .to(badge, {
-        scale: 1.07,
-        rotation: -5,
-        duration: 0.11,
-        ease: "power2.out",
-      })
-
-      .to(badge, {
-        scale: 1.1,
-        rotation: 5,
-        duration: 0.1,
-      })
-
-      .to(badge, {
-        scale: 1.04,
-        rotation: -3,
-        duration: 0.1,
-      })
-
-      .to(badge, {
-        scale: 1,
-        rotation: 0,
-        duration: 0.22,
-        ease: "power2.out",
-      });
-  };
-
-  useLayoutEffect(() => {
-    const section =
-      sectionRef.current;
-
-    if (!section) return;
-
-    const ctx = gsap.context(() => {
-      const cards =
-        gsap.utils.toArray<HTMLElement>(
-          "[data-feature-card]"
-        );
-
-      const badges =
-        gsap.utils.toArray<HTMLElement>(
-          "[data-feature-badge]"
-        );
-
-      const vectors =
-        gsap.utils.toArray<HTMLElement>(
-          "[data-feature-vector]"
-        );
-
-      /* =====================================================
-         TRUE SVG DRAW FUNCTION
-      ===================================================== */
-
-      const createScrollDraw = (
-        path: SVGPathElement | null,
-        trigger: Element | null,
-        start: string,
-        end: string
-      ) => {
-        if (!path || !trigger) return;
-
-        const length =
-          path.getTotalLength();
-
-        /*
-          Hide complete stroke initially.
-        */
-
-        path.style.strokeDasharray =
-          `${length} ${length}`;
-
-        path.style.strokeDashoffset =
-          `${length}`;
-
-        const setProgress = (
-          progress: number
-        ) => {
-          const offset =
-            length *
-            (1 - progress);
-
-          path.style.strokeDashoffset =
-            `${offset}`;
-        };
-
-        ScrollTrigger.create({
-          trigger,
-
-          start,
-          end,
-
-          scrub: true,
-
-          invalidateOnRefresh: true,
-
-          onUpdate: (self) => {
-            setProgress(
-              self.progress
-            );
-          },
-
-          onRefresh: (self) => {
-            setProgress(
-              self.progress
-            );
-          },
-        });
-      };
-
-      /* =====================================================
-         WORK UNDERLINE DRAW
-      ===================================================== */
-
-      createScrollDraw(
-        headingLineRef.current,
-        headingRef.current,
-        "top 82%",
-        "top 38%"
-      );
-
-      /* =====================================================
-         BRANDING LONG SWIRL DRAW
-      ===================================================== */
-
-      createScrollDraw(
-        middleLineRef.current,
-        middleSwirlRef.current,
-        "top 92%",
-        "top 42%"
-      );
-
-      /* =====================================================
-         BOTTOM MINI SWIRL DRAW
-      ===================================================== */
-
-      createScrollDraw(
-        bottomLineRef.current,
-        bottomSwirlRef.current,
-        "top 92%",
-        "top 55%"
-      );
-
-      /* =====================================================
-         SECTION OVERLAP
-      ===================================================== */
-
-      gsap.fromTo(
-        section,
-        {
-          y: 110,
-
-          borderRadius:
-            "48px 48px 0 0",
-        },
-        {
-          y: 0,
-
-          borderRadius: "0px",
-
-          ease: "none",
-
-          scrollTrigger: {
-            trigger: section,
-
-            start:
-              "top bottom",
-
-            end:
-              "top 28%",
-
-            scrub: 1,
-
-            invalidateOnRefresh:
-              true,
-          },
-        }
-      );
-
-      /* =====================================================
-         HEADING
-      ===================================================== */
-
-      if (
-        headingRef.current
-      ) {
-        gsap.fromTo(
-          headingRef.current,
-          {
-            opacity: 0,
-            y: 70,
-          },
-          {
-            opacity: 1,
-            y: 0,
-
-            ease:
-              "power3.out",
-
-            scrollTrigger: {
-              trigger:
-                headingRef.current,
-
-              start:
-                "top 90%",
-
-              end:
-                "top 52%",
-
-              scrub: 1,
-            },
-          }
-        );
-      }
-
-      /* =====================================================
-         CARDS
-      ===================================================== */
-
-      cards.forEach(
-        (card, index) => {
-          gsap.fromTo(
-            card,
-            {
-              opacity: 0,
-
-              y: 85,
-
-              scale: 0.95,
-            },
-            {
-              opacity: 1,
-
-              y: 0,
-
-              scale: 1,
-
-              ease:
-                "power3.out",
-
-              scrollTrigger: {
-                trigger: card,
-
-                start:
-                  "top 96%",
-
-                end:
-                  "top 72%",
-
-                scrub:
-                  0.8 +
-                  index * 0.035,
-
-                invalidateOnRefresh:
-                  true,
-              },
-            }
-          );
-        }
-      );
-
-      /* =====================================================
-         VECTORS POP
-      ===================================================== */
-
-      vectors.forEach(
-        (vector, index) => {
-          gsap.fromTo(
-            vector,
-            {
-              opacity: 0,
-
-              scale: 0,
-
-              rotation:
-                index % 2 === 0
-                  ? -10
-                  : 10,
-            },
-            {
-              opacity: 1,
-
-              scale: 1,
-
-              rotation: 0,
-
-              ease:
-                "back.out(2.4)",
-
-              scrollTrigger: {
-                trigger: vector,
-
-                start:
-                  "top 90%",
-
-                end:
-                  "top 67%",
-
-                scrub: 0.8,
-
-                invalidateOnRefresh:
-                  true,
-              },
-            }
-          );
-        }
-      );
-
-      /* =====================================================
-         BADGES POP + TADA
-      ===================================================== */
-
-      badges.forEach(
-        (badge, index) => {
-          gsap.fromTo(
-            badge,
-            {
-              opacity: 0,
-
-              scale: 0,
-
-              rotation:
-                index % 2 === 0
-                  ? -12
-                  : 12,
-            },
-            {
-              opacity: 1,
-
-              scale: 1,
-
-              rotation: 0,
-
-              ease:
-                "back.out(2.8)",
-
-              scrollTrigger: {
-                trigger: badge,
-
-                start:
-                  "top 92%",
-
-                end:
-                  "top 68%",
-
-                scrub: 0.8,
-
-                invalidateOnRefresh:
-                  true,
-
-                onLeave: () => {
-                  startTada(
-                    badge,
-                    index
-                  );
-                },
-              },
-            }
-          );
-        }
-      );
-
-      /* =====================================================
-         SUBTLE IMAGE PARALLAX
-      ===================================================== */
-
-      cards.forEach(
-        (card, index) => {
-          gsap.to(card, {
-            y:
-              index % 2 === 0
-                ? -30
-                : -48,
-
-            ease: "none",
-
-            scrollTrigger: {
-              trigger: section,
-
-              start:
-                "top 22%",
-
-              end:
-                "bottom top",
-
-              scrub: 1.25,
-            },
-          });
-        }
-      );
-
-      /* =====================================================
-         REFRESH
-      ===================================================== */
-
-      requestAnimationFrame(
-        () => {
-          ScrollTrigger.refresh();
-        }
-      );
-    }, section);
-
-    return () => {
-      ctx.revert();
-    };
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       className={
         styles.featuredSection
       }
       aria-labelledby="featured-heading"
     >
-      <div
-        className={
-          styles.inner
-        }
-      >
+      <div className={styles.panel}>
+        <div
+          className={
+            styles.inner
+          }
+        >
         {/* =================================================
             HEADING
         ================================================= */}
 
         <h2
-          ref={headingRef}
           id="featured-heading"
           className={
             styles.mainHeading
@@ -617,9 +155,6 @@ export default function FeaturedWorkSection() {
               aria-hidden="true"
             >
               <path
-                ref={
-                  headingLineRef
-                }
                 d="
                   M4 25
                   C72 19 122 14 170 18
@@ -637,7 +172,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.topLeftVertical
           }
@@ -656,7 +190,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.topLeftHorizontal
           }
@@ -673,7 +206,6 @@ export default function FeaturedWorkSection() {
         {/* BRANDING */}
 
         <img
-          data-feature-badge
           src="/images/featured/badges/branding.svg"
           alt="Branding"
           className={`${styles.badge} ${styles.brandingBadge}`}
@@ -684,9 +216,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <svg
-          ref={
-            middleSwirlRef
-          }
           className={
             styles.middleSwirl
           }
@@ -695,9 +224,6 @@ export default function FeaturedWorkSection() {
           aria-hidden="true"
         >
           <path
-            ref={
-              middleLineRef
-            }
             d="
               M12 5
               C54 15 84 44 82 78
@@ -714,7 +240,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <img
-          data-feature-vector
           src="/images/featured/vectors/green-shape.svg"
           alt=""
           className={
@@ -725,7 +250,6 @@ export default function FeaturedWorkSection() {
         {/* TOP RIGHT IMAGE */}
 
         <div
-          data-feature-card
           className={
             styles.topRight
           }
@@ -741,7 +265,6 @@ export default function FeaturedWorkSection() {
         {/* ECOMMERCE */}
 
         <img
-          data-feature-badge
           src="/images/featured/badges/ecommerce.svg"
           alt="E-Commerce"
           className={`${styles.badge} ${styles.ecommerceBadge}`}
@@ -752,7 +275,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.middleTop
           }
@@ -770,7 +292,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.middleBottom
           }
@@ -786,7 +307,6 @@ export default function FeaturedWorkSection() {
         {/* GREEN SMALL */}
 
         <img
-          data-feature-vector
           src="/images/featured/vectors/green-small.svg"
           alt=""
           className={
@@ -799,7 +319,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <img
-          data-feature-vector
           src="/images/featured/vectors/purple-shape.svg"
           alt=""
           className={
@@ -810,7 +329,6 @@ export default function FeaturedWorkSection() {
         {/* BOTTOM LEFT IMAGE */}
 
         <div
-          data-feature-card
           className={
             styles.bottomLeft
           }
@@ -826,7 +344,6 @@ export default function FeaturedWorkSection() {
         {/* WEB DEV */}
 
         <img
-          data-feature-badge
           src="/images/featured/badges/webdev.svg"
           alt="Web Development"
           className={`${styles.badge} ${styles.webdevBadge}`}
@@ -837,7 +354,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.bottomRightTop
           }
@@ -856,9 +372,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <svg
-          ref={
-            bottomSwirlRef
-          }
           className={
             styles.bottomSwirl
           }
@@ -867,9 +380,6 @@ export default function FeaturedWorkSection() {
           aria-hidden="true"
         >
           <path
-            ref={
-              bottomLineRef
-            }
             d="
               M4 76
               C16 65 27 66 38 78
@@ -885,7 +395,6 @@ export default function FeaturedWorkSection() {
         ================================================= */}
 
         <div
-          data-feature-card
           className={
             styles.bottomRightBottom
           }
@@ -897,6 +406,7 @@ export default function FeaturedWorkSection() {
             }
             interval={4550}
           />
+        </div>
         </div>
       </div>
     </section>

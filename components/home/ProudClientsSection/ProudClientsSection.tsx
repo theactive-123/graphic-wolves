@@ -7,7 +7,7 @@ import styles from "./ProudClientsSection.module.css";
 const clients = [
   {
     src: "/images/clients/thermolab1.webp",
-    href: "https://thethermolab1.com/",
+    href: "https://thethermolab.com/",
     className: "logo1",
     rotation: 10,
     alt: "ThermoLab",
@@ -63,7 +63,7 @@ const clients = [
   },
   {
     src: "/images/clients/thermolab2.webp",
-    href: "https://thethermolab2.com/",
+    href: "https://thethermolab.com/",
     className: "logo9",
     rotation: 10,
     alt: "ThermoLab",

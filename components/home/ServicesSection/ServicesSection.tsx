@@ -40,25 +40,29 @@ const services = [
 
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const cardsWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
+    const panel = panelRef.current;
     const heading = headingRef.current;
     const cardsWrap = cardsWrapRef.current;
 
-    if (!section || !heading || !cardsWrap) return;
+    if (!section || !panel || !heading || !cardsWrap) return;
 
     const ctx = gsap.context(() => {
       const shells =
         gsap.utils.toArray<HTMLElement>("[data-service-shell]");
+      const parallaxCards =
+        gsap.utils.toArray<HTMLElement>("[data-service-parallax]");
 
       /* =========================================
          INITIAL STATES
       ========================================= */
 
-      gsap.set(section, {
+      gsap.set(panel, {
         yPercent: 16,
         borderRadius: "48px 48px 0px 0px",
       });
@@ -93,7 +97,7 @@ export default function ServicesSection() {
       });
 
       intro.to(
-        section,
+        panel,
         {
           yPercent: 0,
           borderRadius: "0px",
@@ -131,11 +135,11 @@ export default function ServicesSection() {
          SUBTLE CARD PARALLAX AFTER ENTER
       ========================================= */
 
-      shells.forEach((shell, index) => {
+      parallaxCards.forEach((card, index) => {
         const movement =
           index === 0 ? -22 : index === 1 ? 12 : -16;
 
-        gsap.to(shell, {
+        gsap.to(card, {
           y: movement,
           ease: "none",
           scrollTrigger: {
@@ -230,56 +234,60 @@ export default function ServicesSection() {
       className={styles.servicesSection}
       aria-labelledby="services-heading"
     >
-      <div className={styles.inner}>
-        <h2
-          ref={headingRef}
-          id="services-heading"
-          className={styles.mainHeading}
-        >
-          Services
-        </h2>
+      <div ref={panelRef} className={styles.panel}>
+        <div className={styles.inner}>
+          <h2
+            ref={headingRef}
+            id="services-heading"
+            className={styles.mainHeading}
+          >
+            Services
+          </h2>
 
-        <div
-          ref={cardsWrapRef}
-          className={styles.cardsWrap}
-        >
-          {services.map((service) => (
-            <div
-              key={service.title}
-              data-service-shell
-              className={`${styles.cardShell} ${service.shellClass}`}
-            >
-              <Link
-                href={service.href}
-                className={`${styles.serviceCard} ${service.cardClass}`}
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
+          <div
+            ref={cardsWrapRef}
+            className={styles.cardsWrap}
+          >
+            {services.map((service) => (
+              <div
+                key={service.title}
+                data-service-shell
+                className={`${styles.cardShell} ${service.shellClass}`}
               >
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>
-                    {service.title}
-                  </h3>
+                <div data-service-parallax className={styles.cardParallax}>
+                  <Link
+                    href={service.href}
+                    className={`${styles.serviceCard} ${service.cardClass}`}
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className={styles.cardContent}>
+                      <h3 className={styles.cardTitle}>
+                        {service.title}
+                      </h3>
 
-                  <div className={styles.cardDivider} />
+                      <div className={styles.cardDivider} />
 
-                  <p className={styles.cardCaption}>
-                    {service.description}
-                  </p>
+                      <p className={styles.cardCaption}>
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <div
+                      className={styles.cardIcon}
+                      data-service-icon
+                      aria-hidden="true"
+                    >
+                      <img
+                        src={service.icon}
+                        alt=""
+                      />
+                    </div>
+                  </Link>
                 </div>
-
-                <div
-                  className={styles.cardIcon}
-                  data-service-icon
-                  aria-hidden="true"
-                >
-                  <img
-                    src={service.icon}
-                    alt=""
-                  />
-                </div>
-              </Link>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
