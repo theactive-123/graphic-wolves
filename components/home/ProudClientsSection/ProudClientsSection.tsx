@@ -56,7 +56,7 @@ const clients = [
   },
   {
     src: "/images/clients/brian-williams.webp",
-    href: "https://example.com/",
+    href: "https://bwspeaks.com/",
     className: "logo8",
     rotation: -10,
     alt: "Brian Williams",
