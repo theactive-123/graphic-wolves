@@ -12,6 +12,24 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+function stripHtml(value: string): string {
+  return value
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getBlogMetaDescription(post: Awaited<ReturnType<typeof getPostBySlug>>): string {
+  if (!post) return 'Read the latest article from Graphic Wolves.';
+
+  const excerpt = stripHtml(post.excerpt.rendered).slice(0, 160);
+  if (excerpt) return excerpt;
+
+  const content = stripHtml(post.content.rendered).slice(0, 160);
+  return content || 'Read the latest article from Graphic Wolves.';
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
@@ -19,18 +37,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (!post) return { title: 'Post Not Found | Graphic Wolves' };
 
   const image = getFeaturedImage(post);
-  const title = post.title.rendered.replace(/<[^>]*>/g, '');
-  const excerpt = post.excerpt.rendered
-    .replace(/<[^>]*>/g, '')
-    .trim()
-    .slice(0, 160);
+  const title = stripHtml(post.title.rendered) || 'Graphic Wolves Blog';
+  const description = getBlogMetaDescription(post);
 
   return {
     title: `${title} | Graphic Wolves Blog`,
-    description: excerpt,
+    description,
     openGraph: {
       title: `${title} | Graphic Wolves Blog`,
-      description: excerpt,
+      description,
       type: 'article',
       publishedTime: post.date,
       modifiedTime: post.modified,
@@ -41,7 +56,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     twitter: {
       card: 'summary_large_image',
       title: `${title} | Graphic Wolves Blog`,
-      description: excerpt,
+      description,
       ...(image && { images: [image.source_url] }),
     },
     alternates: { canonical: `/blog/${slug}` },

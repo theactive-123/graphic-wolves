@@ -17,7 +17,9 @@
   min-height: 620px;
   margin: 0 auto;
 }
-
+.cardButton {
+    display: none !important;
+}
 /* .inner::before {
   position: absolute;
   top: -105px;
