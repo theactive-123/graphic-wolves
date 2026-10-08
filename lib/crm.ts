@@ -25,7 +25,7 @@ export async function sendCrmLead(
         body: JSON.stringify({
           type: "form",
           source: `nextjs-${form}-form`,
-          data: { form_type: form, ...fields },
+          data: { form_type: form, fields },
         }),
         cache: "no-store",
         signal: AbortSignal.timeout(10000),
