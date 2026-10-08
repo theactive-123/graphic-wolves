@@ -219,7 +219,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
 
             <Image
               className={styles.qrCode}
-              src="/images/whatsapp-qr-placeholder.svg"
+              src="/images/whatsapp-qr-placeholder.webp"
               alt="QR code to start a WhatsApp chat with Graphic Wolves"
               width={190}
               height={190}
@@ -232,11 +232,33 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
                 <br />
                 with us via your smartphone.
               </p>
-              <a href="/#contact">Chat via desktop</a>
+              <a href="https://wa.me/message/V4V42AUPQS52K1" target="_blank" rel="noopener noreferrer">Chat via desktop</a>
             </div>
           </aside>
         </div>
       </header>
+
+      <a
+        className={styles.floatingWhatsApp}
+        href="https://wa.me/message/V4V42AUPQS52K1"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Graphic Wolves on WhatsApp (opens in a new tab)"
+      >
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path
+            d="M16 3.5a12.3 12.3 0 0 0-10.5 18.7L4 28l6-1.6A12.3 12.3 0 1 0 16 3.5Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11.1 10.2c-.4-.8-.8-.8-1.2-.8h-.9c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.9s1.7 4.5 1.9 4.8c.2.3 3.3 5.2 8.1 7.1 4 1.6 4.8 1.3 5.7 1.2.9-.1 2.8-1.2 3.2-2.4.4-1.2.4-2.2.3-2.4-.1-.2-.4-.4-.9-.6l-3.2-1.5c-.4-.2-.8-.3-1.1.3-.3.5-1.3 1.6-1.6 1.9-.3.3-.6.4-1.1.1-.5-.2-2.1-.8-4-2.5-1.5-1.3-2.5-3-2.8-3.5-.3-.5 0-.8.2-1 .2-.2.5-.6.8-.9.3-.3.4-.5.5-.9.2-.4.1-.7 0-.9l-1.1-2.5Z"
+            fill="currentColor"
+            transform="translate(3 0) scale(.8)"
+          />
+        </svg>
+      </a>
     </>
   );
 }

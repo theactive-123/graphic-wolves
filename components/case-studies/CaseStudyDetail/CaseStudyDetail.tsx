@@ -51,6 +51,19 @@ export default function CaseStudyDetail({
   return (
     <article className={styles.page}>
       <div className={styles.content}>
+        <Link className={styles.backLink} href="/our-work">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M19 12H5m0 0 7-7m-7 7 7 7"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span>Back to Our Work</span>
+        </Link>
+
         <header className={styles.intro}>
           <p className={styles.category}>{study.category}</p>
           <h1 className={styles.title}>{study.title}</h1>

@@ -1,0 +1,40 @@
+.button {
+  position: fixed;
+  right: 35px;
+  bottom: 90px;
+  z-index: 9999;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: #0e0e0e;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 200ms ease, background-color 200ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-3px);
+  background: #9863ff;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .button {
+    right: 16px;
+    bottom: 84px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

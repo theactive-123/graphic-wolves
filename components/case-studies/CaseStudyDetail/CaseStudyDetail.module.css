@@ -10,6 +10,38 @@
   margin: 0 auto;
 }
 
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 34px;
+  color: rgba(17, 17, 17, 0.68);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 180ms ease, gap 220ms ease;
+}
+
+.backLink svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  gap: 13px;
+  color: #111;
+  outline: none;
+}
+
+.backLink:hover svg,
+.backLink:focus-visible svg {
+  transform: translateX(-2px);
+}
+
 .intro {
   width: min(100%, 900px);
   margin-bottom: 86px;
@@ -285,6 +317,11 @@
 
   .intro {
     margin-bottom: 42px;
+  }
+
+  .backLink {
+    margin-bottom: 26px;
+    font-size: 14px;
   }
 
   .heroImage {
