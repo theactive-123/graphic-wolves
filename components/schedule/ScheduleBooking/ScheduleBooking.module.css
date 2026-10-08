@@ -1,0 +1,1008 @@
+.section {
+  position: relative;
+  padding: 8px 30px 90px;
+  background:radial-gradient(at 8% 20%, rgb(152 99 255 / 0%), transparent 34%), rgb(249, 246, 245);
+}
+
+.bookingCard {
+  display: grid;
+  width: min(1160px, 100%);
+  min-height: 590px;
+  grid-template-columns: 310px minmax(0, 1fr);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(31, 26, 39, 0.1);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow:
+    0 26px 80px rgba(33, 25, 48, 0.09),
+    0 3px 12px rgba(33, 25, 48, 0.04);
+}
+
+.meetingInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 25px 26px;
+  border-right: 1px solid #ece8f0;
+  background:
+    radial-gradient(circle at 0 0, rgba(152, 99, 255, 0.1), transparent 54%),
+    #fcfbfd;
+}
+
+.brand {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.brand img {
+  display: block;
+  width: 196px;
+  height: auto;
+  object-fit: contain;
+}
+
+.meetingCopy {
+  margin-bottom: 25px;
+}
+
+.host {
+  margin: 0 0 8px;
+  color: #8051d8;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.meetingTitle {
+  margin: 0;
+  color: #18151f;
+  font-family: "Borscha", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.meetingDescription {
+  margin: 13px 0 0;
+  color: #77717f;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.meetingMeta {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 14px;
+  color: #4c4655;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.metaIcon,
+.summaryIcon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  color: #8051d8;
+}
+
+.metaIcon svg,
+.summaryIcon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.timezoneNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 28px;
+  color: #898391;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.timezoneDot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #37a979;
+  box-shadow: 0 0 0 4px rgba(55, 169, 121, 0.12);
+}
+
+.selectedSummary {
+  display: flex;
+  gap: 11px;
+  margin-top: 20px;
+  padding: 13px 12px;
+  border: 1px solid #eee8f8;
+  border-radius: 13px;
+  background: #fff;
+  color: #342f3c;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.selectedSummary strong,
+.selectedSummary small {
+  display: block;
+}
+
+.selectedSummary small {
+  margin-top: 4px;
+  color: #817b89;
+  font-size: 10px;
+}
+
+.bookingContent {
+  min-width: 0;
+  padding: 31px 30px 28px;
+}
+
+.contentHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 23px;
+}
+
+.stepLabel {
+  margin: 0 0 7px;
+  color: #8051d8;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.stepLabel span {
+  color: #a7a1ae;
+}
+
+.contentHeading h2,
+.detailsForm h2,
+.successPanel h2 {
+  margin: 0;
+  color: #1d1924;
+  font-family: "Borscha", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.durationBadge {
+  padding: 8px 11px;
+  border: 1px solid #eee8f8;
+  border-radius: 999px;
+  background: #faf8fd;
+  color: #8051d8;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.dateTimeLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(205px, 0.84fr);
+  gap: 24px;
+}
+
+.calendarPane {
+  min-width: 0;
+  width: 100%;
+}
+
+.monthNavigation {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 13px;
+}
+
+.monthNavigation h3 {
+  margin: 0;
+  color: #28232e;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.monthArrow {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #5b5265;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.monthArrow svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.monthArrow:not(:disabled):hover {
+  transform: scale(1.05);
+  border-color: #e8ddfb;
+  background: #f7f2ff;
+  color: #8051d8;
+}
+
+.monthArrow:disabled {
+  color: #d3ceda;
+  cursor: default;
+}
+
+.calendarGrid {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px 3px;
+}
+
+.weekday {
+  display: grid;
+  min-height: 27px;
+  place-items: center;
+  color: #938d9a;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.dayButton,
+.emptyDay {
+  display: grid;
+  width: 100%;
+  height: 42px;
+  max-width: 42px;
+  place-items: center;
+  justify-self: center;
+}
+
+.dayButton {
+  aspect-ratio: auto;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: #c0bbc6;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  transition:
+    transform 170ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 170ms ease,
+    background-color 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+.dayAvailable {
+  color: #48404f;
+  cursor: pointer;
+}
+
+.dayAvailable:hover,
+.dayAvailable:focus-visible {
+  transform: scale(1.08);
+  border-color: rgba(152, 99, 255, 0.28);
+  background: #f5efff;
+  color: #7446c9;
+  outline: none;
+}
+
+.daySelected,
+.daySelected:hover,
+.daySelected:focus-visible {
+  border-color: #8051d8;
+  background: #8051d8;
+  color: #fff;
+  box-shadow: 0 5px 14px rgba(128, 81, 216, 0.24);
+}
+
+.dayButton:disabled {
+  cursor: default;
+}
+
+.timezoneBlock {
+  margin-top: 22px;
+  padding: 14px 12px;
+  border: 1px solid #f0edf3;
+  border-radius: 12px;
+  background: #fcfbfd;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.timezoneBlock > label {
+  display: block;
+  margin: 0 0 8px;
+  color: #38323e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.timezoneSelectWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.timezoneSelectWrap svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  stroke: #8051d8;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.timezoneSelectWrap select {
+  width: 100%;
+  min-width: 0;
+  padding: 2px 18px 2px 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background: transparent;
+  color: #746d7c;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.timezoneSelectWrap::after {
+  position: absolute;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid #8051d8;
+  border-bottom: 1.5px solid #8051d8;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.timezoneDetected {
+  margin: 7px 0 0;
+  color: #9a94a0;
+  font-size: 9px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.timesPane {
+  min-width: 0;
+  padding-left: 20px;
+  border-left: 1px solid #f0edf3;
+}
+
+.timesPane h3 {
+  min-height: 34px;
+  margin: 2px 0 11px;
+  color: #4b4453;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.selectDateHint {
+  margin: 0;
+  padding: 17px 13px;
+  border: 1px dashed #e9e3f1;
+  border-radius: 12px;
+  color: #8b8492;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.timeList {
+  display: grid;
+  max-height: 335px;
+  gap: 8px;
+  overflow-y: auto;
+  padding: 1px 6px 2px 1px;
+  scrollbar-color: #d2c2ed transparent;
+  scrollbar-width: thin;
+}
+
+.timeButton {
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #d8c8f2;
+  border-radius: 9px;
+  background: #fff;
+  color: #6540ae;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 170ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 170ms ease,
+    background-color 170ms ease,
+    color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+.timeButton:hover,
+.timeButton:focus-visible {
+  transform: translateY(-1px);
+  border-color: #8051d8;
+  background: #faf7ff;
+  box-shadow: 0 5px 12px rgba(128, 81, 216, 0.1);
+  outline: none;
+}
+
+.timeSelected,
+.timeSelected:hover,
+.timeSelected:focus-visible {
+  border-color: #8051d8;
+  background: #8051d8;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(128, 81, 216, 0.22);
+}
+
+.nextButton,
+.submitButton {
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: #17131f;
+  color: #fff;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 190ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 190ms ease,
+    box-shadow 190ms ease;
+}
+
+.nextButton {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.nextButton svg,
+.submitButton svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 190ms ease;
+}
+
+.nextButton:hover,
+.submitButton:not(:disabled):hover {
+  transform: translateY(-2px);
+  background: #8051d8;
+  box-shadow: 0 8px 18px rgba(128, 81, 216, 0.24);
+}
+
+.nextButton:hover svg,
+.submitButton:not(:disabled):hover svg {
+  transform: translateX(3px);
+}
+
+.detailsForm {
+  width: min(100%, 500px);
+  margin: 0 auto;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 27px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #766e80;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.backButton:hover {
+  color: #8051d8;
+}
+
+.backButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 180ms ease;
+}
+
+.backButton:hover svg {
+  transform: translateX(-3px);
+}
+
+.formIntro {
+  margin: 8px 0 23px;
+  color: #807988;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 16px;
+  color: #38323e;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.field b {
+  color: #8051d8;
+}
+
+.field small {
+  margin-left: 5px;
+  color: #9a94a0;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid #e4dfe9;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #28232e;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  transition:
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+.field input {
+  min-height: 45px;
+  padding: 0 13px;
+}
+
+.field textarea {
+  min-height: 88px;
+  padding: 11px 13px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #b0aab6;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #a982ef;
+  box-shadow: 0 0 0 3px rgba(152, 99, 255, 0.11);
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 5px;
+}
+
+.submitButton:disabled {
+  opacity: 0.68;
+  cursor: wait;
+}
+
+.requestNote {
+  margin: 12px 0 0;
+  color: #898391;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.errorMessage {
+  margin: 10px 0 14px;
+  color: #b42318;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.successPanel {
+  display: flex;
+  min-height: 510px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.successIcon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  margin-bottom: 21px;
+  border-radius: 50%;
+  background: #f2ecff;
+  animation: successFloat 3s ease-in-out infinite;
+}
+
+.successIcon svg {
+  width: 62px;
+  height: 62px;
+  overflow: visible;
+}
+
+.successIcon circle {
+  fill: #8051d8;
+  stroke: #8051d8;
+  stroke-width: 2;
+}
+
+.successIcon path {
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.successPanel .stepLabel {
+  margin-bottom: 8px;
+}
+
+.successPanel h2 {
+  max-width: 390px;
+}
+
+.successPanel > p:not(.stepLabel) {
+  max-width: 410px;
+  margin: 12px 0 0;
+  color: #77717f;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.successPanel > p strong {
+  color: #3e354c;
+  overflow-wrap: anywhere;
+}
+
+.successSummary {
+  display: grid;
+  gap: 5px;
+  width: min(100%, 340px);
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid #eee8f8;
+  border-radius: 12px;
+  background: #fcfbfd;
+  color: #3d3547;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.successSummary span {
+  color: #898391;
+  font-size: 10px;
+}
+
+.homeLink {
+  display: inline-flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 18px;
+  border: 1px solid #e4d9f8;
+  border-radius: 999px;
+  color: #7048b9;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.homeLink:hover {
+  transform: translateY(-2px);
+  border-color: #cdb5f3;
+  background: #f8f3ff;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 15px auto 0;
+  color: #938d9a;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.privacyNote svg {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes successFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 900px) {
+  .bookingCard {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .meetingInfo {
+    padding: 27px 21px 22px;
+  }
+
+  .brand {
+    margin-bottom: 35px;
+  }
+
+  .brand img {
+    width: 170px;
+  }
+
+  .bookingContent {
+    padding: 28px 23px 24px;
+  }
+
+  .dateTimeLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(170px, 0.82fr);
+    gap: 16px;
+  }
+
+  .timesPane {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 8px 16px 60px;
+  }
+
+  .bookingCard {
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+  }
+
+  .meetingInfo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 14px;
+    padding: 20px 20px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #ece8f0;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+    margin-bottom: 18px;
+  }
+
+  .brand img {
+    width: 160px;
+  }
+
+  .meetingCopy {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .host {
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+
+  .meetingTitle {
+    font-size: 22px;
+  }
+
+  .meetingDescription {
+    margin-top: 7px;
+    font-size: 11px;
+  }
+
+  .meetingMeta {
+    display: none;
+  }
+
+  .timezoneNote {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+    margin: 0;
+    padding: 0 0 3px;
+    font-size: 9px;
+    text-align: right;
+  }
+
+  .selectedSummary {
+    grid-column: 1 / -1;
+    margin-top: 13px;
+    padding: 10px;
+  }
+
+  .bookingContent {
+    padding: 21px 19px 22px;
+  }
+
+  .dayButton,
+  .emptyDay {
+    height: 34px;
+    max-width: 34px;
+  }
+
+  .contentHeading {
+    margin-bottom: 16px;
+  }
+
+  .contentHeading h2,
+  .detailsForm h2,
+  .successPanel h2 {
+    font-size: 21px;
+  }
+
+  .dateTimeLayout {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .timesPane {
+    padding: 16px 0 0;
+    border-top: 1px solid #f0edf3;
+    border-left: 0;
+  }
+
+  .timesPane h3 {
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+
+  .timeList {
+    max-height: 220px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .timeButton {
+    min-height: 40px;
+    font-size: 11px;
+  }
+
+  .timezoneBlock {
+    margin-top: 16px;
+  }
+
+  .successPanel {
+    min-height: 420px;
+    padding: 15px 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
+  .bookingContent {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .calendarGrid {
+    gap: 3px 1px;
+  }
+
+  .dayButton,
+  .emptyDay {
+    height: 32px;
+    max-width: 32px;
+  }
+
+  .weekday {
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .successIcon {
+    animation: none;
+  }
+
+  .monthArrow,
+  .dayButton,
+  .timeButton,
+  .nextButton,
+  .submitButton,
+  .backButton,
+  .backButton svg,
+  .homeLink {
+    transition: none;
+  }
+}

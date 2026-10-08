@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./StepFour.module.css";
 
 export default function StepFour() {
@@ -28,11 +29,9 @@ export default function StepFour() {
         </p>
       </div>
 
-      <button
+      <Link
         className={styles.scheduleButton}
-        type="button"
-        aria-disabled="true"
-        aria-describedby="schedule-call-note"
+        href="/schedule"
       >
         <span>Schedule a Call</span>
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -44,10 +43,7 @@ export default function StepFour() {
             strokeLinejoin="round"
           />
         </svg>
-      </button>
-      <p className={styles.buttonNote} id="schedule-call-note">
-        Call scheduling will be available here soon.
-      </p>
+      </Link>
     </div>
   );
 }
