@@ -37,6 +37,10 @@ const menuItems = [
     label: "Contact",
     href: "/contact",
   },
+  {
+    label: "Schedule a Call",
+    href: "/schedule",
+  },
 ];
 
 /* =========================================================
