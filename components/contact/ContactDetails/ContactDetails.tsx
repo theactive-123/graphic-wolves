@@ -3,8 +3,8 @@ import styles from "./ContactDetails.module.css";
 const contactCards = [
   {
     label: "Call us",
-    value: "(747) 228-3005",
-    href: "tel:+17472283005",
+    value: "+1 (832) 452-3473",
+    href: "tel:+18324523473",
     description: "Let’s talk about what you’re building.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
