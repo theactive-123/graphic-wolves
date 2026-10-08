@@ -1,3 +1,4 @@
+import { sendCrmLead } from "@/lib/crm";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { BRAND, emailLayout, escapeHtml } from "@/lib/email-template";
@@ -85,8 +86,11 @@ export async function POST(request: Request) {
       }),
     ]);
 
+    const crmSynced = await sendCrmLead("newsletter", { email });
+
     return NextResponse.json({
       success: true,
+      crmSynced,
       message: "Thanks for subscribing. Check your inbox for confirmation.",
     });
   } catch (error) {

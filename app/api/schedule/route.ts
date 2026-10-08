@@ -1,3 +1,4 @@
+import { sendCrmLead } from "@/lib/crm";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { BRAND, emailLayout, escapeHtml } from "@/lib/email-template";
@@ -210,8 +211,11 @@ export async function POST(request: Request) {
       }),
     ]);
 
+    const crmSynced = await sendCrmLead("schedule", { name, email, message: notes, startsAt, timeZone });
+
     return NextResponse.json({
       success: true,
+      crmSynced,
       message: "Your request was sent. Our team will confirm the time by email.",
     });
   } catch (error) {

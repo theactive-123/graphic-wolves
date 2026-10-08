@@ -1,3 +1,4 @@
+import { sendCrmLead } from "@/lib/crm";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { BRAND, emailLayout, escapeHtml } from "@/lib/email-template";
@@ -317,8 +318,11 @@ Graphic Wolves
       });
     }
 
+    const crmSynced = await sendCrmLead("contact", { name: yourName, company: companyName, phone: phoneNo, email: safeEmail, role, services, companyDescription, message: projectDetails });
+
     return NextResponse.json({
       success: true,
+      crmSynced,
       message: "Your project inquiry was submitted.",
     });
   } catch (error) {
