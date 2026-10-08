@@ -13,9 +13,6 @@ interface ContactRequest {
   projectDetails: string;
 }
 
-const SITE_URL = process.env.SITE_URL || "https://graphic-wolves.vercel.app";
-const BOOKING_URL = process.env.BOOKING_URL || SITE_URL;
-
 /* ------------------------------------------------------------------ */
 /* Email building blocks                                               */
 /* ------------------------------------------------------------------ */
@@ -279,13 +276,9 @@ ${projectDetails}
         ${sectionHeading("What happens next")}
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           ${stepRow(1, "We review your brief", "Our team goes through your project details carefully.")}
-          ${stepRow(2, "Book a quick call", "Pick a time that suits you using the booking calendar.")}
+          ${stepRow(2, "We get back to you", "A member of our team will reach out to discuss your inquiry.")}
           ${stepRow(3, "Get a tailored plan", "We share ideas, timeline and pricing for your project.")}
         </table>
-
-        <div style="margin:8px 0 24px 0;">
-          ${buttonHtml("Schedule a Call", BOOKING_URL)}
-        </div>
 
         ${sectionHeading("Your request summary")}
         <div style="margin-bottom:14px;">${serviceBadges(services)}</div>
@@ -307,7 +300,7 @@ Hi ${yourName},
 
 Thank you for contacting us. We have received your project inquiry and our team will review your requirements.
 
-You can schedule a call with our team here: ${BOOKING_URL}
+Our team will get back to you soon to discuss your project.
 
 Regards,
 Graphic Wolves

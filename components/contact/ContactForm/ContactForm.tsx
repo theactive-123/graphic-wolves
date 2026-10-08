@@ -194,7 +194,7 @@ export default function ContactForm() {
               />
             )}
 
-            {step === 4 && (submitted || true) && <StepFour />}
+            {step === 4 && submitted && <StepFour />}
           </div>
         </div>
       </div>
