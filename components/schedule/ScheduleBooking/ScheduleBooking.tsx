@@ -153,7 +153,6 @@ export default function ScheduleBooking() {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [timeZone, setTimeZone] = useState("");
-  const [detectedTimeZone, setDetectedTimeZone] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
@@ -161,18 +160,12 @@ export default function ScheduleBooking() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    let detectedTimeZone = "UTC";
-    try {
-      detectedTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
-    } catch {
-      detectedTimeZone = "UTC";
-    }
+    const defaultTimeZone = "America/New_York";
     const now = new Date();
-    const today = getZonedParts(now, "UTC");
+    const today = getZonedParts(now, defaultTimeZone);
     setTodayKey(`${today.year}-${today.month}-${today.day}`);
     setMonth({ year: Number(today.year), month: Number(today.month) });
-    setTimeZone("UTC");
-    setDetectedTimeZone(detectedTimeZone);
+    setTimeZone(defaultTimeZone);
   }, []);
 
   const calendarCells = useMemo(() => {
@@ -364,7 +357,7 @@ export default function ScheduleBooking() {
 
           <div className={styles.timezoneNote}>
             <span className={styles.timezoneDot} />
-            Times shown in your local timezone
+            Times shown in {timezoneDisplay}
           </div>
         </aside>
 
@@ -477,9 +470,6 @@ export default function ScheduleBooking() {
                         ))}
                       </select>
                     </div>
-                    <p className={styles.timezoneDetected}>
-                      Browser detected: {detectedTimeZone || "Detecting…"}
-                    </p>
                   </div>
                 </div>
 

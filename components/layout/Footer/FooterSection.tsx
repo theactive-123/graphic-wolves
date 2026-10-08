@@ -677,7 +677,7 @@ export default function FooterSection() {
               ref={
                 meetingLogoRef
               }
-              href="/contact"
+              href="/schedule"
               className={
                 styles.meetingLogo
               }
