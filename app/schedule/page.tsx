@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ScheduleHero from "@/components/schedule/ScheduleHero/ScheduleHero";
-import ScheduleBooking from "@/components/schedule/ScheduleBooking/ScheduleBooking";
+import MeetingBooking from "@/components/schedule/MeetingBooking/MeetingBooking";
 import Header from "@/components/layout/Header/Header";
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
@@ -15,7 +15,7 @@ export default function SchedulePage() {
     <main>
       <Header />
       <ScheduleHero />
-      <ScheduleBooking />
+      <MeetingBooking />
       <FooterSection />
     </main>
   );
