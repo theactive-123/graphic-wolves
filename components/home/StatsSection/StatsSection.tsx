@@ -13,7 +13,7 @@ const services = [
   "App Development",
   "CRM Development",
   "API Development",
-  "(SMM)",
+  "SEO/(SMM)",
   "Email Marketing",
   "Campaign Creation",
 ];
