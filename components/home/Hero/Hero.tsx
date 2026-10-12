@@ -383,16 +383,18 @@ export default function Hero() {
       <Header />
 
       <div className={styles.heroContent}>
-        <h1 id="home-hero-heading" className={styles.heading}>
+        <h1
+          id="home-hero-heading"
+          className={styles.heading}
+          aria-label="Expert Design and Development for your brand, web build, and growing business."
+        >
           <span className={styles.line}>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>One</span>
+              <span className={styles.wordInner}>Expert</span>
             </span>
-
-            <span className={`${styles.wordMask} ${styles.team}`}>
-              <span className={styles.wordInner}>team</span>
-            </span>
-
+            <strong className={`${styles.wordMask} ${styles.team}`}>
+              <span className={styles.wordInner}>Design</span>
+            </strong>
             <span className={styles.eyesMask} aria-hidden="true">
               <span className={styles.eyes} aria-hidden="true">
                 <span ref={leftEyeRef} className={styles.eye}>
@@ -403,30 +405,16 @@ export default function Hero() {
                 </span>
               </span>
             </span>
-
-            <span className={styles.wordMask}>
-              <span className={styles.wordInner}>for</span>
-            </span>
-
-            <span className={styles.wordMask}>
-              <span className={styles.wordInner}>the</span>
-            </span>
-
-            <span className={styles.wordMask}>
-              <span className={styles.wordInner}>Brand</span>
-            </span>
           </span>
 
           <span className={styles.line}>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>the</span>
+              <span className={styles.wordInner}>and</span>
             </span>
-
-            <span className={styles.circleWrap}>
+            <strong className={styles.circleWrap}>
               <span className={styles.wordMask}>
-                <span className={styles.wordInner}>Build &amp; Bizz.</span>
+                <span className={styles.wordInner}>Development</span>
               </span>
-
               <svg
                 className={styles.circleSvg}
                 viewBox="0 0 608 100"
@@ -439,6 +427,18 @@ export default function Hero() {
                   d="M322.902 98.9997C232.515 99.0422 140.637 94.7899 58.0275 80.853C31.532 76.3775 2.92086 69.1167 1.08733 58.1139C-0.222339 50.1514 13.3981 42.965 28.5701 37.4583C61.2714 25.5944 103.362 18.1423 146.239 12.7206C228.606 2.3131 316.878 -1.23755 403.155 2.36627C456.307 4.58809 509.519 9.62707 555.338 20.109C581.41 26.0728 606.777 35.279 606.999 46.8453C607.12 53.7659 597.831 60.3569 584.835 65.1939C571.839 70.0309 555.398 73.3158 538.675 76.0266C463.097 88.252 379.057 89.8891 297.011 91.3668"
                 />
               </svg>
+            </strong>
+          </span>
+
+          <span className={`${styles.line} ${styles.supportingLine}`}>
+            <span className={styles.wordMask}>
+              <span className={styles.wordInner}>for your brand,</span>
+            </span>
+            <span className={styles.wordMask}>
+              <span className={styles.wordInner}>web build,</span>
+            </span>
+            <span className={styles.wordMask}>
+              <span className={styles.wordInner}>and growing business.</span>
             </span>
           </span>
         </h1>
