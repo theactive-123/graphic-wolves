@@ -495,7 +495,7 @@ export default function ReviewsSection({
           }
         >
           <span>
-            we are a{" "}
+            We are a{" "}
           </span>
 
           {/* YOUNG */}
@@ -537,10 +537,16 @@ export default function ReviewsSection({
           </span>
 
           <br />
+          {" "}
+          <strong className={styles.designDevelopment}>
+            Design and Development
+          </strong>
+          {" "}
+          <br />
 
           <span>
             team of 42 digitally
-            native
+            native{" "}
           </span>
 
           <br />
@@ -587,7 +593,7 @@ export default function ReviewsSection({
 
           <span>
             {" "}
-            not to brag!
+            Not to brag!
           </span>
 
           <img

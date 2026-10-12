@@ -57,6 +57,7 @@
 ========================================= */
 
 .mainHeading {
+  margin: 0;
   font-family: 'Canela Text Trial Thin';
   font-weight: 100;
   font-style: normal;
@@ -75,6 +76,17 @@
 /* =========================================
    CARDS WRAPPER
 ========================================= */
+
+.tagline {
+  max-width: 760px;
+  margin: 22px auto 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: center;
+  color: #fff;
+}
 
 .cardsWrap {
   position: relative;

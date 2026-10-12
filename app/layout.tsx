@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://graphicwolves.com"),
 
   title: {
-    default: "Graphic Wolves | Branding, Development & E-Commerce",
+    default: "Top Design & Development Agency | Graphic Wolves",
     template: "%s | Graphic Wolves",
   },
 
   description:
-    "Graphic Wolves is a creative team focused on branding, development and e-commerce experiences.",
+    "Elevate your brand with a top design & development agency. Graphic Wolves delivers standout graphic design, branding, and website development services.",
 
   keywords: [
     "Graphic Wolves",

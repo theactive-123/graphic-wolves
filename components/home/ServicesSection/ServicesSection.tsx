@@ -42,15 +42,17 @@ export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
   const cardsWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     const panel = panelRef.current;
     const heading = headingRef.current;
+    const tagline = taglineRef.current;
     const cardsWrap = cardsWrapRef.current;
 
-    if (!section || !panel || !heading || !cardsWrap) return;
+    if (!section || !panel || !heading || !tagline || !cardsWrap) return;
 
     const ctx = gsap.context(() => {
       const shells =
@@ -67,7 +69,7 @@ export default function ServicesSection() {
         borderRadius: "48px 48px 0px 0px",
       });
 
-      gsap.set(heading, {
+      gsap.set([heading, tagline], {
         y: 70,
         autoAlpha: 0,
       });
@@ -108,7 +110,7 @@ export default function ServicesSection() {
       );
 
       intro.to(
-        heading,
+        [heading, tagline],
         {
           y: 0,
           autoAlpha: 1,
@@ -243,6 +245,9 @@ export default function ServicesSection() {
           >
             Services
           </h2>
+          <p ref={taglineRef} className={styles.tagline}>
+            High-impact Design and Development to build your brand and boost sales.
+          </p>
 
           <div
             ref={cardsWrapRef}

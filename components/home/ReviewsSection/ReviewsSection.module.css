@@ -170,6 +170,10 @@
    CANELA
 ========================================= */
 
+.designDevelopment {
+  font-weight: 700;
+}
+
 .mainHeading em {
   position: relative;
 

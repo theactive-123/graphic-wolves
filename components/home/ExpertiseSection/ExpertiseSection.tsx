@@ -271,9 +271,7 @@ export default function ExpertiseSection() {
           </h2>
 
           <p className={styles.caption}>
-            if it lives on a screen, we design it, build it,
-            <br />
-            and make it sell.
+           Expert Design and Development, if it lives on a screen,<br /> we design it, build it, and make it sell.
           </p>
         </div>
       </div>
