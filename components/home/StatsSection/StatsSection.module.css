@@ -260,7 +260,7 @@
 
 .greyBottomCard {
   grid-area: greyBottom;
-
+z-index: 1111;
   background: #d9d9d9;
 }
 
