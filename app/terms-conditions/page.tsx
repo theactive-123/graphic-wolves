@@ -22,7 +22,7 @@ export default function TermsConditionsPage() {
           {
             heading: "1. Acceptance of Terms",
             paragraphs: [
-              "By accessing or using the Graphic Wolves website, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, please do not use our website.",
+              "By accessing or using the Graphic Wolves websites, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, please do not use our website.",
             ],
           },
           {
