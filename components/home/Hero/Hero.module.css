@@ -104,16 +104,6 @@
   font-weight: inherit;
 }
 
-.supportingLine {
-  max-width: 36em;
-  margin: 0.75em auto 0;
-  font-size: 0.42em;
-  line-height: 1.35;
-  letter-spacing: 0;
-  column-gap: 0.25em;
-  row-gap: 0;
-}
-
 .wordMask {
   display: inline-block;
   /* overflow: hidden; */
@@ -245,7 +235,6 @@
   .hero { min-height: 760px; }
   .heroContent { top: 49%; padding: 0 14px; }
   .heading { font-size: clamp(30px, 8.5vw, 54px); line-height: 1.05; }
-  .supportingLine { font-size: clamp(18px, 4.5vw, 23px); margin-top: 1em; }
   .line { gap: 0.1em; }
   .services {
     left: 0;

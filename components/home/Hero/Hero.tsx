@@ -386,11 +386,11 @@ export default function Hero() {
         <h1
           id="home-hero-heading"
           className={styles.heading}
-          aria-label="Expert Design and Development for your brand, web build, and growing business."
+          aria-label="Top-Notch Design and Development for Growing Businesses."
         >
           <span className={styles.line}>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>Expert</span>
+              <span className={styles.wordInner}>Top-Notch</span>
             </span>
             <strong className={`${styles.wordMask} ${styles.team}`}>
               <span className={styles.wordInner}>Design</span>
@@ -405,9 +405,7 @@ export default function Hero() {
                 </span>
               </span>
             </span>
-          </span>
 
-          <span className={styles.line}>
             <span className={styles.wordMask}>
               <span className={styles.wordInner}>and</span>
             </span>
@@ -428,17 +426,14 @@ export default function Hero() {
                 />
               </svg>
             </strong>
-          </span>
-
-          <span className={`${styles.line} ${styles.supportingLine}`}>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>for your brand,</span>
+              <span className={styles.wordInner}>for</span>
             </span>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>web build,</span>
+              <span className={styles.wordInner}>Growing</span>
             </span>
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>and growing business.</span>
+              <span className={styles.wordInner}>Businesses.</span>
             </span>
           </span>
         </h1>
