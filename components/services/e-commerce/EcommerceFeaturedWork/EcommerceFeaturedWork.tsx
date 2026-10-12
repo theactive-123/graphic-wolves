@@ -10,26 +10,12 @@ import styles from "./EcommerceFeaturedWork.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ecommerceCaseStudySlugs = new Set([
-  "dashi",
-  "myatoms",
-  "appcues-product-adoption",
-  "synthesis",
-]);
-
-const projectCategories: Record<string, string> = {
-  dashi: "E-commerce Website Development",
-  myatoms: "E-commerce Experience",
-  "appcues-product-adoption": "Website Development",
-  synthesis: "Web Development",
-};
-
 const projects = caseStudies
-  .filter((study) => ecommerceCaseStudySlugs.has(study.slug))
+  .filter((study) => study.category === "E-commerce")
   .map((study) => ({
     slug: study.slug,
     name: study.title,
-    category: projectCategories[study.slug] ?? "E-commerce Development",
+    category: study.category,
     image:
       study.heroMedia.type === "image"
         ? study.heroMedia.src

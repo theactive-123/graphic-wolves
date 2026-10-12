@@ -12,9 +12,9 @@ function StudyMedia({
 }) {
   if (media.type === "image") {
     return (
-      <div className={`${styles.mediaFrame} ${className}`}>
+      <div className={`${styles.mediaFrame} ${styles.imageFrame} ${className}`}>
         <Image
-          className={styles.mediaContent}
+          className={`${styles.mediaContent} ${styles.imageContent}`}
           src={media.src}
           alt={media.alt}
           width={1440}
@@ -65,7 +65,7 @@ export default function CaseStudyDetail({
         </Link>
 
         <header className={styles.intro}>
-          <p className={styles.category}>{study.category}</p>
+          <p className={styles.category}>{study.eyebrow ?? study.category}</p>
           <h1 className={styles.title}>{study.title}</h1>
           <p className={styles.caption}>{study.caption}</p>
 
@@ -83,11 +83,12 @@ export default function CaseStudyDetail({
 
         <StudyMedia media={study.heroMedia} className={styles.heroImage} />
 
+        <div className={styles.sections}>
         {study.sections.map((section) => {
           const sideMedia = section.media?.find((media) => media.layout === "side");
           const wideMedia = section.media?.filter((media) => media.layout !== "side") ?? [];
           const isStacked = section.titleLayout === "stacked";
-          const sectionParagraphs = (
+          const sectionParagraphs = section.paragraphs.length > 0 ? (
             <div className={styles.sectionParagraphs}>
               {section.paragraphs.map((paragraph) => (
                 <p className={styles.sectionCaption} key={paragraph}>
@@ -95,10 +96,10 @@ export default function CaseStudyDetail({
                 </p>
               ))}
             </div>
-          );
+          ) : null;
 
           return (
-            <section className={styles.contentSection} key={section.title}>
+            <section className={[styles.contentSection, section.layout === "half" ? styles.halfSection : section.layout === "split" ? styles.splitSection : ""].join(" ")} key={section.title}>
               <div className={styles.sectionHeading}>
                 <h2 className={styles.sectionTitle}>{section.title}</h2>
                 {isStacked && sectionParagraphs}
@@ -113,7 +114,7 @@ export default function CaseStudyDetail({
                 <div className={styles.mediaList}>
                   {wideMedia.map((media, index) => (
                     <StudyMedia
-                      className={styles.wideMedia}
+                      className={media.layout === "half" ? styles.halfMedia : styles.wideMedia}
                       key={`${section.title}-${media.src}-${index}`}
                       media={media}
                     />
@@ -123,6 +124,7 @@ export default function CaseStudyDetail({
             </section>
           );
         })}
+        </div>
 
         {nextStudy && (
           <section className={styles.nextProject} aria-label="Next case study">

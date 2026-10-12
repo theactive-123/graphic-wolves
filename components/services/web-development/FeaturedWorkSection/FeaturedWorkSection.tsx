@@ -10,30 +10,12 @@ import styles from "./FeaturedWorkSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const webDevelopmentProjects = new Set([
-  "agent-bounty",
-  "appcues-product-adoption",
-  "synthesis",
-  "richtech-robotics",
-  "myatoms",
-  "dashi",
-]);
-
-const projectCategories: Record<string, string> = {
-  "agent-bounty": "Website Development",
-  "appcues-product-adoption": "Website Development",
-  synthesis: "Web Development",
-  "richtech-robotics": "App Development",
-  myatoms: "App Development",
-  dashi: "Website Development",
-};
-
 const projects = caseStudies
-  .filter((study) => webDevelopmentProjects.has(study.slug))
+  .filter((study) => study.category === "Web Development")
   .map((study) => ({
     slug: study.slug,
     name: study.title,
-    category: projectCategories[study.slug] ?? "Web Development",
+    category: study.category,
     image:
       study.heroMedia.type === "image"
         ? study.heroMedia.src

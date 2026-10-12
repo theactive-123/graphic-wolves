@@ -10,29 +10,21 @@ import styles from "./BrandingFeaturedWork.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const featuredProjectPositions = [
-  ["appcues-product-adoption", "project1"],
-  ["finca-sol-y-cielo", "project2"],
-  ["agent-bounty", "project3"],
-  ["synthesis", "project4"],
-] as const;
+const projectPositions = ["project1", "project2", "project3", "project4"] as const;
 
-const projects = featuredProjectPositions.flatMap(([slug, className]) => {
-  const study = caseStudies.find((item) => item.slug === slug);
-  if (!study) return [];
-
-  return [{
+const projects = caseStudies
+  .filter((study) => study.category === "Branding & Identity")
+  .map((study, index) => ({
     title: study.title,
-    date: study.services[0] ?? "Branding",
+    date: study.category,
     image:
       study.heroMedia.type === "image"
         ? study.heroMedia.src
         : study.heroMedia.poster,
     alt: study.heroMedia.alt,
     href: `/our-work/${study.slug}`,
-    className,
-  }];
-});
+    className: projectPositions[index % projectPositions.length],
+  }));
 
 export default function BrandingFeaturedWork() {
   const sectionRef = useRef<HTMLElement>(null);
