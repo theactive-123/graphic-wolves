@@ -1033,6 +1033,103 @@ export const caseStudies: CaseStudy[] = [
       }
     ]
   },
+  {
+    slug: "beyrmedia",
+    category: "Web Development",
+    eyebrow: "GCSE support parents can trust",
+    title: "EdTech Webflow Website for TutorToday",
+    caption:
+      "A Webflow web development case study: a parent-first EdTech website that turns small-group GCSE lessons, an AI study companion, and motivation coaching into one clear, easy-to-join offer.",
+    services: ["Brand Strategy", "Web Design", "Web Development", "UI/UX", "Webflow", "EdTech"],
+    heroMedia: {
+      type: "image",
+      src: "/images/case-studies-list-images/case-study-10/1.webp",
+      alt: "Beyrmedia website displayed on a laptop with floating stones",
+    },
+    sections: [
+      {
+        title: "The Problem",
+        paragraphs: [
+          "Most GCSE tutoring stops at one hour a week, leaving parents to juggle costly private tutors, impersonal classes, and untested AI tools. TutorToday combines live micro-classes, 24/7 AI help, coaching, and progress tracking—but needed a website that explained it fast.",
+        ],
+        media: [
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/2.webp",
+            alt: "Beyrmedia embossed wordmark on a textured surface",
+            layout: "wide",
+          },
+        ],
+      },
+      {
+        title: "The Discover",
+        paragraphs: [
+          "Research showed parents wanted a complete system, not another tutor. So we built the site around one idea: “Not just a tutor. A full GCSE support system.”",
+          "Clear pricing, tutor profiles, Toby AI, micro-classes, reviews, and FAQs answer key objections, while a 7-day free trial lowers risk.",
+        ],
+        media: [
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/3.webp",
+            alt: "Beyrmedia white wordmark on a black background",
+            layout: "wide",
+          },
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/4.webp",
+            alt: "Beyrmedia website capabilities overview",
+            layout: "wide",
+          },
+        ],
+      },
+      {
+        title: "The Development",
+        paragraphs: [
+          "We developed the site in Webflow with a CMS for subjects, tutors, and FAQs, clean semantic structure for SEO, fast mobile performance, and a frictionless free-trial flow parents finish in minutes.",
+        ],
+        media: [
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/5.webp",
+            alt: "Beyrmedia reviews, FAQs, contact form, and process website sections",
+            layout: "wide",
+          },
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/6.webp",
+            alt: "Beyrmedia creative campaigns website pages",
+            layout: "wide",
+          },
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/7.webp",
+            alt: "Beyrmedia paid media campaigns website pages",
+            layout: "wide",
+          },
+        ],
+      },
+      {
+        title: "Full Page Menu",
+        paragraphs: [
+          "We developed the site in Webflow with a CMS for subjects, tutors, and FAQs, clean semantic structure for SEO, fast mobile performance, and a frictionless free-trial flow parents finish in minutes.",
+        ],
+        media: [
+          {
+            type: "image",
+            src: "/images/case-studies-list-images/case-study-10/8.webp",
+            alt: "Beyrmedia full-page services menu",
+            layout: "wide",
+          },
+        ],
+      },
+      {
+        title: "The Result",
+        paragraphs: [
+          "TutorToday now has a fast, trustworthy EdTech website that explains its full GCSE support system at a glance, is built to rank for key tutoring searches, and turns parent visits into free-trial sign-ups.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(slug: string) {
