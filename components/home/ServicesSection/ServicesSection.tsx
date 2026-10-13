@@ -83,7 +83,7 @@ export default function ServicesSection() {
       /* =========================================
          SECTION COVER / PARALLAX TIMELINE
 
-         1. Black section covers Expertise
+         1. Black panel reveals within the Services section
          2. Heading appears
          3. Cards appear
       ========================================= */

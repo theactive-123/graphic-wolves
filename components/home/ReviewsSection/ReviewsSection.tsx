@@ -7,6 +7,18 @@ import styles from "./ReviewsSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const reviewLogos = [
+  "/images/reviews/reviews-logo/1.webp",
+  "/images/reviews/reviews-logo/2.webp",
+  "/images/reviews/reviews-logo/3.webp",
+  "/images/reviews/reviews-logo/4.webp",
+  "/images/reviews/reviews-logo/5.webp",
+  "/images/reviews/reviews-logo/6.webp",
+  "/images/reviews/reviews-logo/7.webp",
+  "/images/reviews/reviews-logo/8.webp",
+  "/images/reviews/reviews-logo/9.webp"
+];
+
 const reviews = [
   {
     quote:
@@ -648,43 +660,23 @@ export default function ReviewsSection({
                 styles.marqueeTrack
               }
             >
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
-              <span>
-                REVIEWS
-              </span>
+              {[0, 1].map((copy) => (
+                <div className={styles.logoGroup} key={copy}>
+                  {reviewLogos.map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt=""
+                      width={180}
+                      height={90}
+                      loading="lazy"
+                      decoding="async"
+                      draggable={false}
+                      className={styles.marqueeLogo}
+                    />
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
 

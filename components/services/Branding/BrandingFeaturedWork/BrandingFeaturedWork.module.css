@@ -437,7 +437,7 @@
    DATE
 ========================================= */
 
-.projectDate {
+.projectArrow {
   flex-shrink: 0;
 
   font-family:
@@ -510,7 +510,7 @@
 
 
   .projectTitle,
-  .projectDate {
+  .projectArrow {
     font-size:
       23px;
   }
@@ -601,9 +601,19 @@
 
 
   .projectTitle,
-  .projectDate {
+  .projectArrow {
     font-size:
       19px;
   }
 
+}
+.projectArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectArrow svg {
+  width: 1em;
+  height: 1em;
 }

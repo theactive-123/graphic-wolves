@@ -195,6 +195,7 @@
 
 
 .cycleImage {
+  filter: grayscale(25%);
   position: absolute;
 
   inset: 0;
@@ -865,4 +866,68 @@
     display: none;
   }
 
+}
+.projectLink {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.activeProject {
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.projectLink:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+  border-radius: inherit;
+}
+
+:is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom) {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  :is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28), 0 18px 32px rgba(0, 0, 0, 0.18);
+  }
+}
+
+:is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom):focus-within {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28), 0 18px 32px rgba(0, 0, 0, 0.18);
+}
+
+.badge {
+  animation: badgeWobble 3.6s ease-in-out infinite;
+}
+
+.ecommerceBadge {
+  animation-delay: -1.2s;
+}
+
+.webdevBadge {
+  animation-delay: -2.4s;
+}
+
+@keyframes badgeWobble {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-5px) rotate(4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    animation: none;
+  }
+
+  :is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom) {
+    transition: none;
+    transform: none;
+  }
+}
+
+.featuredSection.noOverlap {
+  margin: 0px;
 }

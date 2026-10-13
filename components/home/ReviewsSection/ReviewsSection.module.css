@@ -23,6 +23,9 @@
     right: 0;
     top: 0;
 }
+.logoGroup img {
+    opacity: 0.6;
+}
 .reviewsSection {
   position: relative;
 
@@ -413,7 +416,7 @@
 
   width: max-content;
 
-  gap: 90px;
+  gap: 0;
 
   animation:
     reviewsMarquee
@@ -425,33 +428,22 @@
 }
 
 
-.marqueeTrack span {
+.logoGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   flex: 0 0 auto;
+  min-width: 100vw;
+  gap: 70px;
+  padding-right: 70px;
+}
 
-  color:
-    rgba(
-      0,
-      0,
-      0,
-      0.35
-    );
-
-  font-family:
-    "CanelaText-RegularItalic-Trial",
-    Georgia,
-    serif;
-
-  font-weight: 500;
-
-  font-style: italic;
-
-  font-size: 62px;
-
-  line-height: 1;
-
-  letter-spacing: -0.05em;
-
-  white-space: nowrap;
+.marqueeLogo {
+  display: block;
+  flex: 0 0 auto;
+  width: 180px;
+  height: 90px;
+  object-fit: contain;
 }
 
 
@@ -779,9 +771,7 @@
   }
 
 
-  .marqueeTrack span {
-    font-size: 48px;
-  }
+  .marqueeLogo { width: 150px; height: 75px; }
 
 
   .reviewCard {
@@ -890,14 +880,11 @@
   }
 
 
-  .marqueeTrack {
-    gap: 55px;
-  }
+  .marqueeTrack { gap: 0; }
 
 
-  .marqueeTrack span {
-    font-size: 42px;
-  }
+  .marqueeLogo { width: 120px; height: 60px; }
+  .logoGroup { gap: 36px; padding-right: 36px; }
 
 
   .reviewCard {
@@ -933,4 +920,7 @@
     font-size: 11px;
   }
 
+}
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack { animation: none; }
 }

@@ -868,3 +868,30 @@ left: 35%;
   }
 
 }
+.projectLink {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.activeProject {
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.projectLink:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+  border-radius: inherit;
+}
+
+:is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom) {
+  transition: box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+  :is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom):hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28), 0 18px 32px rgba(0, 0, 0, 0.18);
+  }
+}

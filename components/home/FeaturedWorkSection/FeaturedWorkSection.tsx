@@ -5,111 +5,92 @@ import {
   useState,
 } from "react";
 
+import Link from "next/link";
+import { caseStudies, type CaseStudy } from "@/components/case-studies/data";
+
 import styles from "./FeaturedWorkSection.module.css";
 
 /* =========================================================
    IMAGE ARRAYS
 ========================================================= */
 
-const workImages = {
-  topLeftVertical: [
-    "/images/featured/top-left-vertical/1.webp",
-    "/images/featured/top-left-vertical/2.webp",
-    "/images/featured/top-left-vertical/1.webp",
-  ],
+const slots = [
+  "topLeftVertical", "topLeftHorizontal", "topRight", "middleTop",
+  "middleBottom", "bottomLeft", "bottomRightTop", "bottomRightBottom",
+] as const;
 
-  topLeftHorizontal: [
-    "/images/featured/top-left-horizontal/1.webp",
-    "/images/featured/top-left-horizontal/2.webp",
-    "/images/featured/top-left-horizontal/1.webp",
-  ],
-
-  topRight: [
-    "/images/featured/top-right/1.webp",
-    "/images/featured/top-right/2.webp",
-    "/images/featured/top-right/1.webp",
-  ],
-
-  middleTop: [
-    "/images/featured/middle-top/1.webp",
-    "/images/featured/middle-top/2.webp",
-    "/images/featured/middle-top/1.webp",
-  ],
-
-  middleBottom: [
-    "/images/featured/middle-bottom/1.webp",
-    "/images/featured/middle-bottom/2.webp",
-    "/images/featured/middle-bottom/1.webp",
-  ],
-
-  bottomLeft: [
-    "/images/featured/bottom-left/1.webp",
-    "/images/featured/bottom-left/2.webp",
-    "/images/featured/bottom-left/1.webp",
-  ],
-
-  bottomRightTop: [
-    "/images/featured/bottom-right-top/1.webp",
-    "/images/featured/bottom-right-top/2.webp",
-    "/images/featured/bottom-right-top/1.webp",
-  ],
-
-  bottomRightBottom: [
-    "/images/featured/bottom-right-bottom/1.webp",
-    "/images/featured/bottom-right-bottom/2.webp",
-    "/images/featured/bottom-right-bottom/1.webp",
-  ],
+type Slot = (typeof slots)[number];
+const categorySlots: Record<string, Slot[]> = {
+  "Branding & Identity": ["topLeftVertical", "topLeftHorizontal", "middleBottom"],
+  "E-commerce": ["topRight", "middleTop"],
+  "Web Development": ["bottomLeft", "bottomRightTop", "bottomRightBottom"],
 };
 
-/* =========================================================
-   IMAGE CYCLER
-========================================================= */
+const workProjects = Object.fromEntries(
+  slots.map((slot) => {
+    const category = Object.keys(categorySlots).find((key) => categorySlots[key].includes(slot));
+    const categoryProjects = caseStudies.filter((study) => study.category === category);
+    const projects = categoryProjects.length ? categoryProjects : caseStudies;
+    const offset = category ? categorySlots[category].indexOf(slot) : 0;
+    return [slot, [...projects.slice(offset), ...projects.slice(0, offset)]];
+  })
+) as Record<Slot, CaseStudy[]>;
 
 function CycleImage({
-  images,
+  projects,
   interval = 3500,
   width = 400,
   height = 300,
 }: {
-  images: string[];
+  projects: CaseStudy[];
   interval?: number;
   width?: number;
   height?: number;
 }) {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (images.length <= 1) return;
-
+    if (projects.length <= 1 || paused) return;
     const timer = window.setInterval(() => {
-      setActive((current) => {
-        return (current + 1) % images.length;
-      });
+      setActive((current) => (current + 1) % projects.length);
     }, interval);
-
-    return () => {
-      window.clearInterval(timer);
-    };
-  }, [images, interval]);
+    return () => window.clearInterval(timer);
+  }, [projects, interval, paused]);
 
   return (
-    <div className={styles.cycleInner}>
-      {images.map((src, index) => (
-        <img
-          key={`${src}-${index}`}
-          src={src}
-          alt=""
-          draggable={false}
-          width={width}
-          height={height}
-          loading="lazy"
-          decoding="async"
-          className={`${styles.cycleImage} ${
-            active === index
-              ? styles.activeImage
-              : ""
-          }`}
-        />
+    <div
+      className={styles.cycleInner}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={(event) => setPaused(event.currentTarget.contains(document.activeElement))}
+      onFocus={() => setPaused(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setPaused(event.currentTarget.matches(":hover"));
+        }
+      }}
+    >
+      {projects.map((study, index) => (
+        <Link
+          key={study.slug}
+          href={`/our-work/${study.slug}`}
+          prefetch={false}
+          aria-label={`View ${study.title} - ${study.category}`}
+          aria-hidden={active !== index}
+          tabIndex={active === index ? 0 : -1}
+          className={`${styles.projectLink} ${active === index ? styles.activeProject : ""}`}
+        >
+          <img
+            src={study.heroMedia.type === "image" ? study.heroMedia.src : study.heroMedia.poster}
+            alt={study.heroMedia.alt}
+            draggable={false}
+            width={width}
+            height={height}
+            loading="lazy"
+            decoding="async"
+            className={`${styles.cycleImage} ${active === index ? styles.activeImage : ""}`}
+          />
+        </Link>
       ))}
     </div>
   );
@@ -119,11 +100,11 @@ function CycleImage({
    MAIN COMPONENT
 ========================================================= */
 
-export default function FeaturedWorkSection() {
+export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?: boolean }) {
   return (
     <section
       className={
-        styles.featuredSection
+        `${styles.featuredSection} ${noOverlap ? styles.noOverlap : ""}`
       }
       aria-labelledby="featured-heading"
     >
@@ -185,8 +166,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages
+            projects={
+              workProjects
                 .topLeftVertical
             }
             interval={3200}
@@ -205,8 +186,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages
+            projects={
+              workProjects
                 .topLeftHorizontal
             }
             interval={3700}
@@ -275,8 +256,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages.topRight
+            projects={
+              workProjects.topRight
             }
             interval={4100}
             width={380}
@@ -306,8 +287,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages.middleTop
+            projects={
+              workProjects.middleTop
             }
             interval={3600}
             width={340}
@@ -325,8 +306,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages.middleBottom
+            projects={
+              workProjects.middleBottom
             }
             interval={4300}
             width={330}
@@ -372,8 +353,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages.bottomLeft
+            projects={
+              workProjects.bottomLeft
             }
             interval={3850}
             width={390}
@@ -403,8 +384,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages
+            projects={
+              workProjects
                 .bottomRightTop
             }
             interval={4000}
@@ -446,8 +427,8 @@ export default function FeaturedWorkSection() {
           }
         >
           <CycleImage
-            images={
-              workImages
+            projects={
+              workProjects
                 .bottomRightBottom
             }
             interval={4550}

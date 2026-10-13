@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./FutureSection.module.css";
@@ -437,7 +438,9 @@ export default function FutureSection() {
 
           {/* CARD 1 */}
 
-          <div
+          <Link
+            href="/services/branding"
+            aria-label="Explore branding services"
             className={`${styles.cardShell} ${styles.cardOneShell}`}
             data-float-zone
           >
@@ -456,11 +459,13 @@ export default function FutureSection() {
                 decoding="async"
               />
             </div>
-          </div>
+          </Link>
 
           {/* CARD 2 */}
 
-          <div
+          <Link
+            href="/services/e-commerce"
+            aria-label="Explore e-commerce services"
             className={`${styles.cardShell} ${styles.cardTwoShell}`}
             data-float-zone
           >
@@ -479,11 +484,13 @@ export default function FutureSection() {
                 decoding="async"
               />
             </div>
-          </div>
+          </Link>
 
           {/* CARD 3 */}
 
-          <div
+          <Link
+            href="/services"
+            aria-label="Explore our services"
             className={`${styles.cardShell} ${styles.cardThreeShell}`}
             data-float-zone
           >
@@ -502,11 +509,13 @@ export default function FutureSection() {
                 decoding="async"
               />
             </div>
-          </div>
+          </Link>
 
           {/* CARD 4 */}
 
-          <div
+          <Link
+            href="/services/web-development"
+            aria-label="Explore web development services"
             className={`${styles.cardShell} ${styles.cardFourShell}`}
             data-float-zone
           >
@@ -525,11 +534,12 @@ export default function FutureSection() {
                 decoding="async"
               />
             </div>
-          </div>
+          </Link>
 
           {/* TAG 1 */}
-
-          <div
+          <Link
+            href="/services/branding"
+            aria-label="Explore branding services"
             className={`${styles.tagShell} ${styles.brandingTagShell}`}
             data-float-zone
           >
@@ -541,11 +551,13 @@ export default function FutureSection() {
             >
               Branding
             </div>
-          </div>
+          </Link>
 
           {/* TAG 2 */}
 
-          <div
+          <Link
+            href="/services/e-commerce"
+            aria-label="Explore e-commerce services"
             className={`${styles.tagShell} ${styles.ecommerceTagShell}`}
             data-float-zone
           >
@@ -557,11 +569,13 @@ export default function FutureSection() {
             >
               e-commerce
             </div>
-          </div>
+          </Link>
 
           {/* TAG 3 */}
 
-          <div
+          <Link
+            href="/services/web-development"
+            aria-label="Explore web development services"
             className={`${styles.tagShell} ${styles.developmentTagShell}`}
             data-float-zone
           >
@@ -573,7 +587,7 @@ export default function FutureSection() {
             >
               Development
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* =====================================

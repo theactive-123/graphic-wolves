@@ -6,7 +6,7 @@ import styles from "./ProudClientsSection.module.css";
 
 const clients = [
   {
-    src: "/images/clients/thermolab1.webp",
+    src: "/images/clients/thermolab.webp",
     href: "https://thethermolab.com/",
     className: "logo1",
     rotation: 10,
@@ -20,7 +20,7 @@ const clients = [
     alt: "Hey Buddy",
   },
   {
-    src: "/images/clients/dermalyft1.webp",
+    src: "/images/clients/dermalyft.webp",
     href: "https://dermalyft.com/",
     className: "logo3",
     rotation: -8,
@@ -34,25 +34,25 @@ const clients = [
     alt: "Casa Cinta",
   },
   {
-    src: "/images/clients/dermalyft2.webp",
-    href: "https://dermalyft.com/",
+    src: "/images/clients/alpha-chain.webp",
+    href: "https://alpha-chain-e414e2.webflow.io/",
     className: "logo5",
     rotation: 10,
-    alt: "DermaLyft",
+    alt: "Alpha Chain",
   },
   {
-    src: "/images/clients/heybubby.webp",
-    href: "https://www.heybuddy.io/",
+    src: "/images/clients/beyrmedia.webp",
+    href: "https://www.beyrmedia.com/",
     className: "logo6",
-    rotation: 0,
-    alt: "Hey Buddy",
+    rotation: 10,
+    alt: "Bey R Media",
   },
   {
-    src: "/images/clients/dermalyft3.webp",
-    href: "https://dermalyft.com/",
+    src: "/images/clients/peak-motion.webp",
+    href: "https://peakmotion.fit/",
     className: "logo7",
     rotation: 9,
-    alt: "DermaLyft",
+    alt: "Peak Motion",
   },
   {
     src: "/images/clients/brian-williams.webp",
@@ -62,11 +62,11 @@ const clients = [
     alt: "Brian Williams",
   },
   {
-    src: "/images/clients/thermolab2.webp",
-    href: "https://thethermolab.com/",
+    src: "/images/clients/tutor.webp",
+    href: "https://web.tutortoday.io/",
     className: "logo9",
     rotation: 10,
-    alt: "ThermoLab",
+    alt: "Tutortoday",
   },
 ];
 

@@ -15,8 +15,7 @@ const projectPositions = ["project1", "project2", "project3", "project4"] as con
 const projects = caseStudies
   .filter((study) => study.category === "Branding & Identity")
   .map((study, index) => ({
-    title: study.title,
-    date: study.category,
+    title: study.businessName ?? study.title.split(" for ").pop() ?? study.title,
     image:
       study.heroMedia.type === "image"
         ? study.heroMedia.src
@@ -258,9 +257,11 @@ export default function BrandingFeaturedWork() {
                 </span>
 
                 <span
-                  className={styles.projectDate}
-                >
-                  {project.date}
+                  className={styles.projectArrow}
+                aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </span>
               </div>
             </Link>

@@ -12,6 +12,7 @@ export type CaseStudySection = {
 
 export type CaseStudy = {
   slug: string;
+  businessName?: string;
   category: string;
   eyebrow?: string;
   title: string;
@@ -26,6 +27,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "appcues-product-adoption",
+    businessName: "Appcues",
     category: "Branding & Identity",
     eyebrow: "Make adoption feel simple",
     title: "SaaS Brand & Website Design for Appcues",
@@ -144,6 +146,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "alphachain-metals",
+    businessName: "Alpha Chain",
     category: "Branding & Identity",
     eyebrow: "Aluminum, sourced right",
     title: "Industrial Brand Identity for AlphaChain Metals",
@@ -253,6 +256,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "twirl-ugc",
+    businessName: "Twirl",
     category: "Branding & Identity",
     eyebrow: "Real creators, real results",
     title: "UGC Brand Identity & Website for Twirl",
@@ -1036,11 +1040,11 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "beyrmedia",
     category: "Web Development",
-    eyebrow: "GCSE support parents can trust",
-    title: "EdTech Webflow Website for TutorToday",
+    eyebrow: "A full-service agency, unified",
+    title: "Digital Agency Website for Beyrmedia",
     caption:
-      "A Webflow web development case study: a parent-first EdTech website that turns small-group GCSE lessons, an AI study companion, and motivation coaching into one clear, easy-to-join offer.",
-    services: ["Brand Strategy", "Web Design", "Web Development", "UI/UX", "Webflow", "EdTech"],
+      "A web design and development case study: a premium, dark-mode agency website that unites 14 services across media, data, creative, and strategy into one clear, data-led brand story.",
+    services: ["Brand Strategy", "Web Design", "Web Development", "UI/UX", "Nextjs", "Agency"],
     heroMedia: {
       type: "image",
       src: "/images/case-studies-list-images/case-study-10/1.webp",
@@ -1050,7 +1054,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "The Problem",
         paragraphs: [
-          "Most GCSE tutoring stops at one hour a week, leaving parents to juggle costly private tutors, impersonal classes, and untested AI tools. TutorToday combines live micro-classes, 24/7 AI help, coaching, and progress tracking—but needed a website that explained it fast.",
+          "Beyrmedia is a full-service digital marketing and creative agency with 14 services, four companies under Beyrmedia & Co., and US and Australia teams. Its old site read like a generic service list—hiding that scale, blurring the offer, and giving buyers no clear path.",
         ],
         media: [
           {
@@ -1064,8 +1068,8 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "The Discover",
         paragraphs: [
-          "Research showed parents wanted a complete system, not another tutor. So we built the site around one idea: “Not just a tutor. A full GCSE support system.”",
-          "Clear pricing, tutor profiles, Toby AI, micro-classes, reviews, and FAQs answer key objections, while a 7-day free trial lowers risk.",
+          "We mapped Beyrmedia’s services, audiences, and competing agencies. Buyers wanted proof of scale and a clear way to navigate a big offer. So we built the site around one line: “Defining how brands are built, measured and grown.”",
+          "14 services became four pillars—Media, Data, Creative, and Strategy",
         ],
         media: [
           {
@@ -1085,7 +1089,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "The Development",
         paragraphs: [
-          "We developed the site in Webflow with a CMS for subjects, tutors, and FAQs, clean semantic structure for SEO, fast mobile performance, and a frictionless free-trial flow parents finish in minutes.",
+          "We developed a fast, responsive site with an immersive particle hero, glassmorphic stat cards, a four-pillar mega menu, service landing pages, FAQs, and a guided “Start your brief” form for leads.",
         ],
         media: [
           {
@@ -1111,7 +1115,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Full Page Menu",
         paragraphs: [
-          "We developed the site in Webflow with a CMS for subjects, tutors, and FAQs, clean semantic structure for SEO, fast mobile performance, and a frictionless free-trial flow parents finish in minutes.",
+          "The full-page mega menu turns 14 services into four clear pillars—Media, Data, Creative, and Strategy—each with a short promise and direct links, plus a “Let’s build something premium” call to action.",
         ],
         media: [
           {
@@ -1125,7 +1129,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "The Result",
         paragraphs: [
-          "TutorToday now has a fast, trustworthy EdTech website that explains its full GCSE support system at a glance, is built to rank for key tutoring searches, and turns parent visits into free-trial sign-ups.",
+          "Beyrmedia now has a premium, SEO-ready agency website that shows its full-service scale at a glance, makes 14 services easy to explore, and turns enterprise and SMB visits into qualified project briefs.",
         ],
       },
     ],

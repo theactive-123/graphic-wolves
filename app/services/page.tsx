@@ -22,7 +22,7 @@ export default function ServicesPage() {
       <ServicesAccordion />
       <ProjectsIntroSection />
       <CreativeTeamSection />
-      <FeatureWorkSection />
+      <FeatureWorkSection noOverlap />
       <ReviewsSection />
       <FooterSection />
     </main>
