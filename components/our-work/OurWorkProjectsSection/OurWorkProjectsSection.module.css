@@ -17,6 +17,8 @@
 
 .content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
   gap: 18px;
   width: 100%;
   opacity: 0;
@@ -33,6 +35,7 @@
 }
 
 .rowViewport {
+  min-width: 0;
   width: 100%;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
@@ -47,7 +50,7 @@
 
 .trackReverse {
   animation-name: marqueeRight;
-  animation-duration: 70s;
+  animation-duration: 62s;
 }
 
 .group {
@@ -60,7 +63,8 @@
 
 .project {
   display: block;
-  flex: 0 0 calc((100cqw - 60px) / 3);
+  flex: 0 0 auto;
+  width: calc((100cqw - 60px) / 3);
   color: inherit;
   text-decoration: none;
 }
@@ -125,7 +129,12 @@
   outline-offset: 6px;
 }
 
-.rowViewport:hover .track,
+@media (hover: hover) {
+  .rowViewport:hover .track {
+    animation-play-state: paused;
+  }
+}
+
 .rowViewport:focus-within .track {
   animation-play-state: paused;
 }
@@ -143,9 +152,9 @@
   .section { min-height: 520px; padding: 76px 0 84px; }
   .content { gap: 20px; }
   .track { animation-duration: 48s; }
-  .trackReverse { animation-duration: 54s; }
+  .trackReverse { animation-duration: 48s; }
   .group { gap: 14px; padding-right: 14px; }
-  .project { flex-basis: calc((100cqw - 36px) / 2); }
+  .project { width: calc((100cqw - 36px) / 2); }
   .projectTitle { margin-top: 9px; font-size: 17px; }
 }
 
