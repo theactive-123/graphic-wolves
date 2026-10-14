@@ -205,7 +205,7 @@ export async function POST(request: Request) {
             <p style="margin:0 0 6px;font-weight:700;color:${BRAND.black};">${escapeHtml(appointment)}</p>
             <p style="margin:0 0 18px;color:${BRAND.muted};">${escapeHtml(timeZoneLabel)} (${escapeHtml(timeZone)})</p>
             <p style="margin:0;">This time is not confirmed yet. Our team will check availability and reply to this email.</p>
-            <p style="margin:24px 0 0;">Regards,<br /><strong>Graphic Wolves</strong></p>
+            <p style="margin:23px 0 0;">Regards,<br /><strong>Graphic Wolves</strong></p>
           `,
         }),
       }),
