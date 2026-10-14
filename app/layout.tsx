@@ -101,6 +101,12 @@ export default function RootLayout({
           }}
         />
 
+        <Script
+          id="crm-source-tracking"
+          src={new URL('/crm-source.js', process.env.CRM_BASE_URL || 'https://the-active-solutions.vercel.app').href}
+          strategy="afterInteractive"
+        />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FJNDHD2F27"
