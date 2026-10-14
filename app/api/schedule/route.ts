@@ -211,7 +211,7 @@ export async function POST(request: Request) {
       }),
     ]);
 
-    const crmSynced = await sendCrmLead("schedule", { name, email, message: notes, startsAt, timeZone });
+    const crmSynced = await sendCrmLead("schedule", { name, email, message: notes, startsAt, timeZone }, request);
 
     return NextResponse.json({
       success: true,

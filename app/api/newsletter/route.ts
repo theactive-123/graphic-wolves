@@ -86,7 +86,7 @@ export async function POST(request: Request) {
       }),
     ]);
 
-    const crmSynced = await sendCrmLead("newsletter", { email });
+    const crmSynced = await sendCrmLead("newsletter", { email }, request);
 
     return NextResponse.json({
       success: true,

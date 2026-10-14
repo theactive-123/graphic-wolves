@@ -318,7 +318,7 @@ Graphic Wolves
       });
     }
 
-    const crmSynced = await sendCrmLead("contact", { name: yourName, company: companyName, phone: phoneNo, email: safeEmail, role, services, companyDescription, message: projectDetails });
+    const crmSynced = await sendCrmLead("contact", { name: yourName, company: companyName, phone: phoneNo, email: safeEmail, role, services, companyDescription, message: projectDetails }, request);
 
     return NextResponse.json({
       success: true,
