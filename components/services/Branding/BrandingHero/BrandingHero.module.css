@@ -495,3 +495,14 @@
     min-height: auto !important;
   }
 }
+
+@media (min-width: 1201px) {
+  .heading,
+  .growth {
+    font-size: 60px;
+  }
+
+  .caption {
+    max-width: 800px;
+  }
+}
