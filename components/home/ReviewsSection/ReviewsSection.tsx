@@ -19,71 +19,100 @@ const reviewLogos = [
   "/images/reviews/reviews-logo/9.webp"
 ];
 
+
 const reviews = [
   {
     quote:
-      "they nailed our brand on the first go. it felt less like a project and more like they actually got us. rare.",
-    name: "Ángela Danius",
-    role: "Creative Director",
+      "They understood the vision and made the whole brand feel more clear, consistent, and true to the product.",
+    name: "MaryBeth",
+    role: "Product Designer",
+    brand: "APPCUES",
     bg: "#EDFFC5",
     x: "7%",
     lane: "left",
   },
   {
     quote:
-      "the whole process was genuinely fun. clear updates, sharp ideas, and a brand we're proud to show off everywhere.",
-    name: "Georges Drolin",
-    role: "Los Canales Chile",
+      "I wanted a brand people could trust, and the final result feels professional, clear, and right for our business.",
+    name: "Abdul Rahman",
+    role: "Owner",
+    brand: "ALPHACHAIN",
     bg: "#D2DDFF",
     x: "54%",
     lane: "center",
   },
   {
     quote:
-      "your new site loads fast, looks unreal, and doubled our demo bookings. worth every penny.",
-    name: "Aleena Ulum",
-    role: "Art Director",
+      "They brought my ideas together in a way that feels cohesive and much closer to what I had imagined.",
+    name: "Lara",
+    role: "Founder",
+    brand: "TWIRL",
     bg: "#EDFFC5",
     x: "78%",
     lane: "right",
   },
   {
     quote:
-      "our store went from clunky to converting. checkout is smooth and sales have not looked back since launch.",
-    name: "Nicolás del Pino",
-    role: "CIT",
+      "We wanted a website that was simple to use, and the final design makes everything easier to understand.",
+    name: "Amari Robinson",
+    role: "Co-Founder",
+    brand: "TUTORTODAY",
     bg: "#FBE6FF",
     x: "18%",
     lane: "left",
   },
   {
     quote:
-      "easy to work with, big on detail, and always a step ahead. we keep coming back for the next build.",
-    name: "Ahmed Hamad",
-    role: "Founder",
+      "The website feels personal and professional, making it easier for people to understand my work and connect with me.",
+    name: "Brian William",
+    role: "Founder & Speaker",
+    brand: "BW SPEAKS",
     bg: "#F2F2F2",
     x: "72%",
     lane: "right",
   },
   {
     quote:
-      "the whole process was genuinely fun. clear updates, sharp ideas, and a brand we're proud to show off everywhere.",
-    name: "Georges Drolin",
-    role: "Los Canales Chile",
+      "The store presents our products beautifully and makes the shopping experience feel simple and straightforward.",
+    name: "Tod Key",
+    role: "Founder",
+    brand: "THERMOLAB",
     bg: "#D2DDFF",
     x: "8%",
     lane: "left",
   },
   {
     quote:
-      "easy to work with, big on detail, and always a step ahead. we keep coming back for the next build.",
-    name: "Ahmed Hamad",
+      "We wanted shopping to feel effortless, and the website brings that idea to life with a clean, friendly experience.",
+    name: "Alexander Dijkema",
     role: "Founder",
+    brand: "HEYBUDDY",
     bg: "#F2F2F2",
     x: "43%",
     lane: "center",
   },
+  {
+    quote:
+      "The design captures our brand's energy while making it easy for customers to explore our products.",
+    name: "Lauro Ramires",
+    role: "Owner",
+    brand: "PEAK MOTION",
+    bg: "#EDFFC5",
+    x: "76%",
+    lane: "right",
+  },
+  {
+    quote:
+      "The website gives our products the clean, premium presentation we wanted while keeping everything easy to navigate.",
+    name: "Alex Spago",
+    role: "Business Owner",
+    brand: "DERMALYFT",
+    bg: "#FBE6FF",
+    x: "22%",
+    lane: "left",
+  },
 ];
+
 
 const clamp = (value: number, min = 0, max = 1) =>
   Math.min(Math.max(value, min), max);
@@ -765,6 +794,16 @@ export default function ReviewsSection({
                     >
                       {
                         review.role
+                      }
+                    </span>
+
+                    <span
+                      className={
+                        styles.role
+                      }
+                    >
+                      {
+                        review.brand
                       }
                     </span>
                   </div>
