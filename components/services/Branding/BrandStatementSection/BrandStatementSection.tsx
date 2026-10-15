@@ -196,28 +196,28 @@ export default function BrandStatementSection() {
             data-brand-line
             className={styles.line}
           >
-            We combine premium
+            We Combine Strategic{" "}
           </span>
 
           <span
             data-brand-line
             className={styles.line}
           >
-            quality with strategic 
+            Brand Positioning with{" "}
           </span>
 
           <span
             data-brand-line
             className={styles.line}
           >
-            scalability to elevate your
+            Distinctive Design to{" "}
           </span>
 
           <span
             data-brand-line
             className={`${styles.line} ${styles.lastLine}`}
           >
-            <span>brand</span>
+            <span>Elevate Your Brand</span>
 
             <img
               ref={iconRef}
@@ -228,6 +228,9 @@ export default function BrandStatementSection() {
             />
           </span>
         </h2>
+        <p className={styles.caption}>
+          From brand strategy and logo design to complete visual identity systems, we create brands that stand out and stay consistent. Whether you&apos;re launching a startup or planning a rebrand, we shape your identity around your goals and audience.
+        </p>
       </div>
     </section>
   );

@@ -8,9 +8,17 @@ import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Branding & Brand Identity Design",
+  title: { absolute: "Brand Identity Design Services | Graphic Wolves" },
   description:
-    "Build a memorable brand with Graphic Wolves. We create strategic brand identities, visual systems, and design that help businesses stand out and grow.",
+    "Build a stronger brand with Graphic Wolves. We offer brand strategy, logo design, visual identity, and rebranding services tailored to your business goals.",
+  keywords: [
+    "brand identity design services",
+    "brand strategy agency",
+    "logo design agency",
+    "rebranding agency",
+    "brand positioning agency",
+    "startup branding agency",
+  ],
   alternates: { canonical: "/services/branding" },
 };
 

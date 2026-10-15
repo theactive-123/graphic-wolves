@@ -8,22 +8,8 @@ import styles from "./AgencyIntroSection.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const paragraphLines = [
-  <>
-    <strong>We started young and set up</strong> a new type of agency without all the
-    layers of hierarchy and bureaucracy, just collaboration and talent. Nine years on,
-  </>,
-
-  <>
-    we bring exactly that to every project. A close-knit, multi-disciplinary
-  </>,
-
-  <>
-    team under one roof that ties strategy, design, motion, development,
-  </>,
-
-  <>
-    and UX together.
-  </>,
+  <>Graphic Wolves is a digital design agency combining brand strategy, identity design, web development, and e-commerce. </>,
+  <>Our team brings design and strategy together to create digital experiences that support business goals.</>,
 ];
 
 export default function AgencyIntroSection() {
@@ -136,9 +122,7 @@ export default function AgencyIntroSection() {
         ===================================== */}
 
         <h2 className={styles.heading}>
-          Branding, strategy, and web
-          design processes are
-          different at Your Creative —
+          A Full-Service Creative Agency Bringing Strategy, Design &amp; Development Together
         </h2>
 
         {/* =====================================

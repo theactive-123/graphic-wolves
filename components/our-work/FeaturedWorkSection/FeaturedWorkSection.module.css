@@ -200,25 +200,12 @@
 
   opacity: 0;
 
-  transform:
-    scale(1.04);
-
-  transition:
-    opacity 0.8s ease,
-    transform 1.2s
-      cubic-bezier(
-        0.22,
-        1,
-        0.36,
-        1
-      );
+  transition: opacity 0.8s ease;
 }
 
 
 .activeImage {
   opacity: 1;
-
-  transform: scale(1);
 }
 
 
@@ -894,4 +881,8 @@ left: 35%;
   :is(.topLeftVertical, .topLeftHorizontal, .topRight, .middleTop, .middleBottom, .bottomLeft, .bottomRightTop, .bottomRightBottom):hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28), 0 18px 32px rgba(0, 0, 0, 0.18);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cycleImage { transition: none; }
 }

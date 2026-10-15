@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: "Branding & Identity",
+    title: "Brand Identity Design & Branding",
     caption:
       "We craft product-focused visual identities that attract high-quality leads. By blending visual clarity with business strategy, our approach ensures design isn't just beautiful — it drives measurable growth.",
     image:
@@ -25,7 +25,7 @@ const services = [
   },
 
   {
-    title: "Web Development",
+    title: "Custom Web Development",
     caption:
       "Fast, polished, conversion-focused websites built with clean code, strong UX, thoughtful interaction and scalable architecture.",
     image:
@@ -34,7 +34,7 @@ const services = [
   },
 
   {
-    title: "E-Commerce Services",
+    title: "E-Commerce Design & Development",
     caption:
       "High-converting e-commerce experiences designed around product discovery, frictionless checkout and long-term customer retention.",
     image:

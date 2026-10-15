@@ -153,11 +153,7 @@ export default function ProjectsIntroSection() {
             id="projects-intro-heading"
             className={styles.heading}
           >
-            A decade of projects where
-        
-            design and strategy meet
-          
-            purpose.
+            Design and Strategy That Make a Difference
           </h2>
 
           <div
@@ -165,17 +161,14 @@ export default function ProjectsIntroSection() {
             className={styles.bottomContent}
           >
             <p className={styles.caption}>
-              Guided by our impact sectors we bring specialised
-              insights to each partnership allowing us to scale
-              initiatives, tackle complex problems, and inspire
-              communities.
+              We bring design and strategy together to solve business challenges and create meaningful digital experiences across branding, website development, and e-commerce.
             </p>
 
             <Link
               href="/our-work"
               className={styles.button}
             >
-              <span>Projects</span>
+              <span>Explore Our Projects</span>
 
               <span
                 className={styles.arrow}

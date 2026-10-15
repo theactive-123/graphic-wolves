@@ -9,7 +9,7 @@ import styles from "./CreativeTeamSection.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const captionText =
-  "Learn more about our studio, our culture and most importantly our people";
+  "Get to know our studio, our culture, and the people behind our work.";
 
 export default function CreativeTeamSection() {
   const sectionRef =
@@ -182,8 +182,7 @@ export default function CreativeTeamSection() {
         >
           Designers, Developers,
           <br />
-          Strategists, Sellers,
-          &amp; Storyteller
+          Strategists, Sellers &amp; Storytellers
         </h2>
 
         <p

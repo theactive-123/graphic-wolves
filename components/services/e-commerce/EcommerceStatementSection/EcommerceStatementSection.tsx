@@ -216,16 +216,16 @@ export default function EcommerceStatementSection() {
         <div className={styles.inner}>
           <h2 className={styles.heading}>
             <span data-brand-line className={styles.line}>
-              We combine premium
+              E-Commerce Design &amp;{" "}
             </span>
             <span data-brand-line className={styles.line}>
-              quality with strategic
+              Development Built{" "}
             </span>
             <span data-brand-line className={styles.line}>
-              scalability to elevate your
+              Around Your{" "}
             </span>
             <span data-brand-line className={`${styles.line} ${styles.lastLine}`}>
-              <span>brand</span>
+              <span>Business</span>
               <img
                 ref={iconRef}
                 src="/images/services/branding/brand-icon.svg"
@@ -251,36 +251,34 @@ export default function EcommerceStatementSection() {
         />
 
         <div className={styles.corePanel}>
-          <h2 id="ecommerce-core-heading" className={styles.coreHeading}>
-            Strengthen your product with
-            <br />
-            our core E-commerce Development
-          </h2>
+          <p id="ecommerce-core-heading" className={styles.coreHeading}>
+            Explore our core e-commerce development services.
+          </p>
 
           <div className={styles.serviceGrid}>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Shopify store setup</h3>
-              <p>End-to-end store setup including products, collections, payments, taxes, and shipping.</p>
+              <h3>Shopify Store Setup</h3>
+              <p>Set up products, collections, payments, taxes, and shipping for your Shopify store.</p>
             </article>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Custom theme development</h3>
-              <p>Fully custom Shopify themes built for performance, branding, and conversion.</p>
+              <h3>Custom Shopify Theme Development</h3>
+              <p>Custom, responsive Shopify themes built around your brand, usability, and performance.</p>
             </article>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Shopify app development</h3>
-              <p>Custom apps tailored to unique business workflows and ecommerce needs.</p>
+              <h3>Shopify App Development</h3>
+              <p>Custom Shopify apps designed for your business workflows and e-commerce needs.</p>
             </article>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Shopify plus solutions</h3>
-              <p>Enterprise-grade Shopify Plus development for high-volume stores.</p>
+              <h3>Shopify Plus Solutions</h3>
+              <p>Shopify Plus development for growing businesses with more complex store requirements.</p>
             </article>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Ecommerce integrations</h3>
-              <p>CRM, ERP, marketing, analytics, and fulfillment system integrations.</p>
+              <h3>E-Commerce Integrations</h3>
+              <p>Connect CRM, ERP, marketing, analytics, and fulfillment tools with your store.</p>
             </article>
             <article data-core-card className={styles.serviceCard}>
-              <h3>Performance &amp; CRO</h3>
-              <p>Speed optimization, UX improvements, and conversion rate optimization.</p>
+              <h3>Performance &amp; Conversion Rate Optimization</h3>
+              <p>Improve site speed, user experience, and the shopping journey to reduce friction.</p>
             </article>
           </div>
         </div>

@@ -171,15 +171,11 @@ export default function EcommerceHero() {
           </div>
 
           <h1 data-ecommerce-heading className={styles.heading}>
-            Where Great Design
-            <br />
-            Meets <span className={styles.highlight}>Better Sales.</span>
+            Shopify Plus Agency for <span className={styles.highlight}>High-Performing Online Stores</span>
           </h1>
 
           <p data-ecommerce-caption className={styles.caption}>
-            Bold design. Smooth shopping. Faster checkouts. We build high-performing
-            <br className={styles.desktopBreak} />
-            stores that turn inspiration into customers and scale with your business.
+            We design and develop Shopify stores with distinctive branding, smooth shopping, and streamlined checkout experiences, from new launches to Shopify Plus builds.
           </p>
         </div>
       </div>

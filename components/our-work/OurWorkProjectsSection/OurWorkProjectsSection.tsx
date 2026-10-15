@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useViewportActivity } from "@/components/case-studies/useViewportActivity";
 import Link from "next/link";
 import { caseStudies } from "@/components/case-studies/data";
 import styles from "./OurWorkProjectsSection.module.css";
@@ -24,11 +26,14 @@ function ProjectRow({ reverse = false }: { reverse?: boolean }) {
               <Link
                 className={styles.project}
                 href={project.href}
+                prefetch={false}
                 tabIndex={copy === 1 ? -1 : undefined}
                 key={`${project.name}-${project.image}-${index}`}
               >
                 <span className={styles.imageWrap}>
-                  <img src={project.image} alt="" loading="lazy" draggable={false} />
+                  <Image src={project.image} alt="" fill
+                    sizes="(max-width: 700px) 50vw, 33vw"
+                    loading="lazy" decoding="async" draggable={false} />
                 </span>
                 <span className={styles.projectTitle}>
                   <span className={styles.projectName}>{project.name}</span>
@@ -43,36 +48,15 @@ function ProjectRow({ reverse = false }: { reverse?: boolean }) {
 }
 
 export default function OurWorkProjectsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const { ref: sectionRef, inView, active } = useViewportActivity<HTMLElement>();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const revealOnScroll = () => {
-      if (section.getBoundingClientRect().top <= window.innerHeight * 0.82) {
-        setIsVisible(true);
-        window.removeEventListener("scroll", revealOnScroll);
-        window.removeEventListener("lenis-scroll", revealOnScroll);
-        window.removeEventListener("resize", revealOnScroll);
-      }
-    };
-
-    revealOnScroll();
-    window.addEventListener("scroll", revealOnScroll, { passive: true });
-    window.addEventListener("lenis-scroll", revealOnScroll);
-    window.addEventListener("resize", revealOnScroll);
-
-    return () => {
-      window.removeEventListener("scroll", revealOnScroll);
-      window.removeEventListener("lenis-scroll", revealOnScroll);
-      window.removeEventListener("resize", revealOnScroll);
-    };
-  }, []);
+    if (inView) setIsVisible(true);
+  }, [inView]);
 
   return (
-    <section ref={sectionRef} className={styles.section} aria-label="Selected work projects">
+    <section ref={sectionRef} data-animating={active} className={styles.section} aria-label="Selected work projects">
       <div className={`${styles.content} ${isVisible ? styles.visible : ""}`}>
         <ProjectRow />
         <ProjectRow reverse />

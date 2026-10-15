@@ -12,44 +12,44 @@ const steps = [
   {
     title: "Discover",
     description:
-      "We understand your brand, products, target customers, and growth goals to define the right Shopify strategy.",
+      "We learn about your products, customers, and goals.",
     deliverable: "Requirements document, project roadmap",
     duration: "1-2 weeks",
   },
   {
     title: "Strategize",
     description:
-      "We map the customer journey, store structure, and technical plan around your products and business goals.",
+      "We plan store structure, functionality, and the customer journey.",
     deliverable: "Store architecture, feature plan",
     duration: "1 week",
   },
   {
     title: "Design",
     description:
-      "We shape a clear, distinctive shopping experience that makes products easy to discover and buy.",
+      "We design a branded storefront that makes shopping easier.",
     deliverable: "Storefront designs, responsive prototypes",
     duration: "2-3 weeks",
   },
   {
     title: "Develop",
     description:
-      "We build your storefront, configure commerce features, and connect the tools your team relies on.",
+      "We build the store and configure agreed features and integrations.",
     deliverable: "Custom Shopify storefront, integrations",
     duration: "3-5 weeks",
   },
   {
     title: "Test",
     description:
-      "We test the full shopping journey across devices, payment methods, and store operations before launch.",
+      "We check key shopping flows, functionality, and device layouts.",
     deliverable: "Quality assurance, launch checklist",
     duration: "1 week",
   },
   {
     title: "Launch",
     description:
-      "We launch your store, monitor its performance, and help your team confidently manage what comes next.",
-    deliverable: "Live store, handover and support",
-    duration: "Ongoing support",
+      "We launch the store and provide the agreed handover and support.",
+    deliverable: "Live store, handover, and agreed support",
+    duration: "Based on project scope and support requirements",
   },
 ];
 
@@ -163,9 +163,7 @@ export default function EcommerceProcessSection() {
       <div className={styles.stickyStage}>
         <div className={styles.inner}>
           <h2 id="process-heading" className={styles.heading}>
-            How we develop user-centric
-            <br />
-            digital solutions
+            Our E-Commerce Development Process
           </h2>
 
           <div className={styles.processPanel}>

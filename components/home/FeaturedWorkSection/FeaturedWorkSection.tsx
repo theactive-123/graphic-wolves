@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-} from "react";
-
-import Link from "next/link";
+import CycleImage from "@/components/case-studies/ProjectImageCycle";
 import { caseStudies, type CaseStudy } from "@/components/case-studies/data";
 
 import styles from "./FeaturedWorkSection.module.css";
@@ -35,66 +30,6 @@ const workProjects = Object.fromEntries(
     return [slot, [...projects.slice(offset), ...projects.slice(0, offset)]];
   })
 ) as Record<Slot, CaseStudy[]>;
-
-function CycleImage({
-  projects,
-  interval = 3500,
-  width = 400,
-  height = 300,
-}: {
-  projects: CaseStudy[];
-  interval?: number;
-  width?: number;
-  height?: number;
-}) {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (projects.length <= 1 || paused) return;
-    const timer = window.setInterval(() => {
-      setActive((current) => (current + 1) % projects.length);
-    }, interval);
-    return () => window.clearInterval(timer);
-  }, [projects, interval, paused]);
-
-  return (
-    <div
-      className={styles.cycleInner}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={(event) => setPaused(event.currentTarget.contains(document.activeElement))}
-      onFocus={() => setPaused(true)}
-      onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) {
-          setPaused(event.currentTarget.matches(":hover"));
-        }
-      }}
-    >
-      {projects.map((study, index) => (
-        <Link
-          key={study.slug}
-          href={`/our-work/${study.slug}`}
-          prefetch={false}
-          aria-label={`View ${study.title} - ${study.category}`}
-          aria-hidden={active !== index}
-          tabIndex={active === index ? 0 : -1}
-          className={`${styles.projectLink} ${active === index ? styles.activeProject : ""}`}
-        >
-          <img
-            src={study.heroMedia.type === "image" ? study.heroMedia.src : study.heroMedia.poster}
-            alt={study.heroMedia.alt}
-            draggable={false}
-            width={width}
-            height={height}
-            loading="lazy"
-            decoding="async"
-            className={`${styles.cycleImage} ${active === index ? styles.activeImage : ""}`}
-          />
-        </Link>
-      ))}
-    </div>
-  );
-}
 
 /* =========================================================
    MAIN COMPONENT
@@ -166,6 +101,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects
                 .topLeftVertical
@@ -186,6 +122,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects
                 .topLeftHorizontal
@@ -256,6 +193,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects.topRight
             }
@@ -287,6 +225,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects.middleTop
             }
@@ -306,6 +245,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects.middleBottom
             }
@@ -353,6 +293,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects.bottomLeft
             }
@@ -384,6 +325,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects
                 .bottomRightTop
@@ -427,6 +369,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
           }
         >
           <CycleImage
+            classNames={styles}
             projects={
               workProjects
                 .bottomRightBottom

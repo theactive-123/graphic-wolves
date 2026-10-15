@@ -36,14 +36,11 @@ export default function DevelopersLoveSection() {
         <div className={styles.content}>
 
           <h2 className={styles.heading}>
-            Your Developers will love it.
+            Websites Built Around How Your Business Works
           </h2>
 
           <p className={styles.caption}>
-            Prospect is built to anticipate developer workflows,
-            from environment setup to deployment automation. We
-            learn how you work, then remove the friction before it
-            starts.
+            We build websites around your goals and audience, with a focus on usability, performance, and maintainability.
           </p>
 
 
@@ -59,20 +56,18 @@ export default function DevelopersLoveSection() {
               <div className={styles.icon}>
                 <img
                   src="/images/services/web-development/trustedicons/TreeStructure.svg"
-                  alt="Dev-centric tooling"
+                  alt="Custom web development"
                   width="28"
                   height="28"
                 />
               </div>
 
               <h3 className={styles.featureHeading}>
-                Dev-Centric Tooling
+                Custom Web Development
               </h3>
 
               <p className={styles.featureCaption}>
-                A suite of APIs, CLIs, and SDKs that feel native—
-                because they are. Fast to integrate, easy to scale,
-                and built to get out of your way.
+                Custom layouts, functionality, and integrations shaped around your business needs.
               </p>
 
             </div>
@@ -84,20 +79,18 @@ export default function DevelopersLoveSection() {
               <div className={styles.icon}>
                 <img
                   src="/images/services/web-development/trustedicons/FingerprintSimple.svg"
-                  alt="Intelligent debugging"
+                  alt="Performance-focused development"
                   width="28"
                   height="28"
                 />
               </div>
 
               <h3 className={styles.featureHeading}>
-                Intelligent Debugging
+                Performance-Focused Development
               </h3>
 
               <p className={styles.featureCaption}>
-                Prospect surfaces issues before they hit production
-                and flags anomalies without noise. Fewer alerts.
-                More signal. Smarter builds.
+                Responsive layouts and efficient page experiences help your website work smoothly across devices.
               </p>
 
             </div>

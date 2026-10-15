@@ -41,9 +41,7 @@ export default function ServicesHero() {
 
       <div className={styles.headingWrap}>
         <h1 id="services-page-heading" className={styles.heading}>
-          A Full-Service Creative
-          <br />
-          &amp; Digital Agency
+          Digital Design Agency for Branding, Web Development &amp; E-Commerce
         </h1>
       </div>
     </section>

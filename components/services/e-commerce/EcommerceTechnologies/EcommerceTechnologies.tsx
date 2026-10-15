@@ -96,12 +96,12 @@ export default function EcommerceTechnologies() {
           data-tech-heading
           className={styles.heading}
         >
-          <span className={styles.headingBold}>Tools&amp;</span>
+          <span className={styles.headingBold}>Tools &amp;{" "}</span>
           <span className={styles.headingItalic}>Technologies</span>
         </h2>
 
         <p data-tech-caption className={styles.caption}>
-          The platforms and technology behind better shopping experiences.
+          The platforms and integrations behind connected, easy-to-use shopping experiences.
         </p>
 
         <div className={styles.grid}>

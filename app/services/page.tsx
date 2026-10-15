@@ -9,8 +9,9 @@ import ProjectsIntroSection from "@/components/services/ProjectsIntroSection/Pro
 import CreativeTeamSection from "@/components/services/CreativeTeamSection/CreativeTeamSection";
 import FeatureWorkSection from "@/components/home/FeaturedWorkSection/FeaturedWorkSection";
 export const metadata: Metadata = {
-  title: "Our Services",
-  description: "Explore Graphic Wolves creative, development and e-commerce services.",
+  title: { absolute: "Digital Design Agency Services | Graphic Wolves" },
+  description: "Graphic Wolves is a digital design agency offering branding, custom web development, and e-commerce services to help businesses build stronger brands and digital experiences.",
+  keywords: ["digital design agency", "creative digital agency", "full service creative agency"],
 };
 
 export default function ServicesPage() {

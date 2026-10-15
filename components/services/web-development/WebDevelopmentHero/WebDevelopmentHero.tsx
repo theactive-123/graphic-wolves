@@ -15,9 +15,9 @@ const cards = [
   {
     type: "stat",
     color: "blue",
-    stat: "+5 Years",
-    title: "Brand experience",
-    caption: "Experiences that stick",
+    stat: "Custom Websites",
+    title: "Built Around Your Business",
+    caption: "Digital experiences designed for your goals",
   },
   {
     type: "image",
@@ -27,9 +27,9 @@ const cards = [
   {
     type: "stat",
     color: "green",
-    stat: "+30 Brands",
-    title: "Built to Scale",
-    caption: "Grow without limits",
+    stat: "Responsive Design",
+    title: "Made for Every Screen",
+    caption: "Consistent experiences across devices",
   },
   {
     type: "image",
@@ -162,12 +162,8 @@ export default function WebDevelopmentHero() {
           data-web-heading
           className={styles.heading}
         >
-          Websites That Stay
-          <br />
-          Fast as{" "}
-          <span className={styles.growth}>
-            You Grow.
-          </span>
+          Custom Websites That Stay Fast as{" "}
+          <span className={styles.growth}>You Grow</span>
         </h1>
 
         {/* CAPTION */}
@@ -176,9 +172,7 @@ export default function WebDevelopmentHero() {
           data-web-caption
           className={styles.caption}
         >
-          We build websites that stay fast, stable, and reliable as your
-          <br />
-          business grows, engineered for lasting performance.
+          We provide custom web development services for businesses that need reliable, responsive websites built around their goals and future growth.
         </p>
 
         {/* CARDS */}

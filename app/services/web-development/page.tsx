@@ -12,9 +12,10 @@ import FooterSection from "@/components/layout/Footer/FooterSection";
 import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
 
 export const metadata: Metadata = {
-  title: "Web Development Services",
+  title: { absolute: "Custom Web Development Services | Graphic Wolves" },
   description:
-    "Get a fast, scalable website built for your business. Graphic Wolves delivers custom web development, integrations, and digital experiences designed to perform.",
+    "Graphic Wolves provides custom web development services, combining thoughtful website design, reliable development, and practical integrations.",
+  keywords: ["custom web development services","web development agency","website design and development company","website development company","business website development"],
   alternates: { canonical: "/services/web-development" },
 };
 

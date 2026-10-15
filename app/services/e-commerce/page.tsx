@@ -8,9 +8,10 @@ import EcommerceProcessSection from "@/components/services/e-commerce/EcommerceP
 import EcommerceTechnologies from "@/components/services/e-commerce/EcommerceTechnologies/EcommerceTechnologies";
 import EcommerceFeaturedWork from "@/components/services/e-commerce/EcommerceFeaturedWork/EcommerceFeaturedWork";
 export const metadata: Metadata = {
-  title: "E-Commerce Website Design & Development",
+  title: { absolute: "Shopify Plus Agency | Graphic Wolves" },
   description:
-    "Grow your online store with custom e-commerce design and development from Graphic Wolves. We build high-converting, scalable shopping experiences for ambitious brands.",
+    "Graphic Wolves is a Shopify Plus agency offering Shopify development, custom themes, e-commerce integrations, and conversion-focused store experiences.",
+  keywords: ["shopify plus agency","shopify development agency","ecommerce website design company","ecommerce development agency","shopify agency"],
   alternates: { canonical: "/services/e-commerce" },
 };
 export default function EcommercePage() {

@@ -222,7 +222,7 @@ export default function ToolsTechnologiesSection() {
           className={styles.heading}
         >
           <span className={styles.headingBold}>
-            Tools&amp;
+            Tools &amp;{" "}
           </span>
 
           <span className={styles.headingItalic}>
@@ -238,9 +238,7 @@ export default function ToolsTechnologiesSection() {
           data-tools-caption
           className={styles.caption}
         >
-          if it lives on a screen, we design it, build it,
-          <br />
-          and make it sell.
+          From brand identity to digital experiences, we design and build with your brand in mind.
         </p>
 
         {/* =====================================

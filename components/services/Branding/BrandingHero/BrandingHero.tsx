@@ -435,17 +435,8 @@ export default function BrandingHero() {
             styles.heading
           }
         >
-          We design clarity we
-          <br />
-
-          build{" "}
-          <span
-            className={
-              styles.growth
-            }
-          >
-            growth.
-          </span>
+          Brand Identity Design Services That Build{" "}
+          <span className={styles.growth}>Growth</span>
         </h1>
 
         {/* =================================
@@ -457,14 +448,7 @@ export default function BrandingHero() {
             styles.caption
           }
         >
-          GraphicWolves is a
-          creative agency focused
-          on strategy, design, and
-          digital
-          <br />
-          experiences that help
-          brands grow with
-          intention.
+          Graphic Wolves helps businesses build distinctive brand identities, communicate their value, and grow with purpose.
         </p>
       </div>
 

@@ -47,22 +47,20 @@ export default function SmartIntegrationsSection() {
       <div className={styles.inner}>
         <div className={styles.copy}>
           <h2 id="integrations-title" className={styles.heading}>
-            Smart Integrations.
+            Smart Integrations
           </h2>
 
           <p className={styles.caption}>
-            Our integrations are designed to work seamlessly with the tools your
-            team already uses, reducing friction and amplifying productivity
-            across your workflow.
+            We connect your website with relevant tools and platforms to support smoother workflows.
           </p>
 
           <div className={styles.includeBlock}>
-            <h3 className={styles.includeHeading}>Include</h3>
+            <h3 className={styles.includeHeading}>Integration Capabilities</h3>
             <ul className={styles.includeList}>
-              <li>Role-based access &amp; custom permissions</li>
-              <li>Real-time team &amp; device sync</li>
-              <li>Secure sharing, no extra logins</li>
-              <li>Centralized admin controls</li>
+              <li>Third-party tools and service integrations</li>
+              <li>Forms and lead capture workflows</li>
+              <li>Content management tools</li>
+              <li>Centralized website management</li>
             </ul>
             <a className={styles.seeMore} href="#integration-cards">
               See more...

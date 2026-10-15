@@ -4,22 +4,22 @@ const processSteps = [
   {
     title: "Discovery & Strategy",
     description:
-      "We run a structured kick-off with your marketing and leadership team before touching a single wireframe. We map your buyer's journey, your competitive positioning, and the one thing your site needs to do to move the business forward.",
+      "We define your audience, goals, and website requirements.",
   },
   {
     title: "Information Architecture",
     description:
-      "We run a structured kick-off with your marketing and leadership team before touching a single wireframe. We map your buyer's journey.",
+      "We organize pages and content so visitors can find what they need.",
   },
   {
     title: "Wireframing",
     description:
-      "We run a structured kick-off with your marketing and leadership team before touching a single wireframe. We map your buyer's journey, your competitive positioning.",
+      "We map page layouts, content hierarchy, and key calls to action.",
   },
   {
     title: "Copywriting",
     description:
-      "We run a structured kick-off with your marketing and leadership team before touching a single wireframe.",
+      "We create clear website copy that explains your offer and guides visitors.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function OurProcessSection() {
         <ol className={styles.processList}>
           {processSteps.map((step, index) => (
             <li className={styles.processRow} key={step.title}>
-              <span className={styles.stepNumber}>{index + 1} -</span>
+              <span className={styles.stepNumber}>{String(index + 1).padStart(2, "0")}</span>
               <h3 className={styles.stepHeading}>{step.title}</h3>
               <p className={styles.stepDescription}>{step.description}</p>
             </li>
