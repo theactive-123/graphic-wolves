@@ -441,9 +441,9 @@
 .marqueeLogo {
   display: block;
   flex: 0 0 auto;
-  width: 180px;
-  height: 90px;
-  object-fit: contain;
+     width: 130px;
+    height: 40px;
+    object-fit: contain;
 }
 
 

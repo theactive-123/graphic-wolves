@@ -15,8 +15,8 @@ const reviewLogos = [
   "/images/reviews/reviews-logo/5.webp",
   "/images/reviews/reviews-logo/6.webp",
   "/images/reviews/reviews-logo/7.webp",
-  "/images/reviews/reviews-logo/8.webp",
-  "/images/reviews/reviews-logo/9.webp"
+  "/images/reviews/reviews-logo/8.webp"
+  // "/images/reviews/reviews-logo/9.webp"
 ];
 
 
