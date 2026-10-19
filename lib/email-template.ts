@@ -1,4 +1,4 @@
-const SITE_URL = process.env.SITE_URL || "https://graphic-wolves.vercel.app";
+const SITE_URL = process.env.SITE_URL || "https://graphicwolves.com";
 const LOGO_URL =
   process.env.EMAIL_LOGO_URL || `${SITE_URL}/images/graphic-logo.svg`;
 
