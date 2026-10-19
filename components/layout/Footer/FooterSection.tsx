@@ -980,7 +980,7 @@ export default function FooterSection() {
                   }
                 >
                   Graphicwolves™ 2026,
-                  All Rights Reserved
+                  All Rights Reserved.
                 </p>
               </div>
 
