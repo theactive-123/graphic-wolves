@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import ScrollChatVisibility from "@/components/layout/ScrollChatVisibility";
 import "./globals.css";
 import BackToTopButton from "@/components/layout/BackToTopButton/BackToTopButton";
 import SmoothScroll from "@/components/layout/SmoothScroll/SmoothScroll";
@@ -124,6 +125,15 @@ export default function RootLayout({
           {`
             var Tawk_API = Tawk_API || {};
             var Tawk_LoadStart = new Date();
+            function syncTawkVisibility() {
+              if (document.documentElement.dataset.chatVisible === "true") {
+                Tawk_API.showWidget();
+              } else {
+                Tawk_API.hideWidget();
+              }
+            }
+            Tawk_API.onBeforeLoad = syncTawkVisibility;
+            Tawk_API.onLoad = syncTawkVisibility;
             (function() {
               var s1 = document.createElement("script");
               var s0 = document.getElementsByTagName("script")[0];
@@ -139,6 +149,7 @@ export default function RootLayout({
         {/* Global Lenis Smooth Scroll */}
         <SmoothScroll />
         <BackToTopButton />
+        <ScrollChatVisibility />
 
         {children}
       </body>

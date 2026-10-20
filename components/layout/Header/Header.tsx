@@ -27,6 +27,12 @@ const menuItems = [
     icon: "/images/menu-icons/services-icon.svg",
     alt: "Graphic Wolves services navigation icon",
   },
+  {
+    label: "ALL WORK",
+    href: "/our-work",
+    icon: "/images/menu-icons/allwork.svg",
+    alt: "Graphic Wolves work navigation icon",
+  },
 ];
 
 export default function Header({ variant = "default" }: { variant?: "default" | "light" }) {
@@ -57,7 +63,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
     if (href === "/") return pathname === "/";
     if (href === "/about") return pathname === "/about";
     if (href === "/services") return pathname === "/services" || pathname.startsWith("/services/");
-    return false;
+    return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   return (
@@ -165,11 +171,11 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
 
             <Link
               className={styles.workButton}
-              href="/our-work"
+              href="/schedule"
               onClick={closePanels}
-              aria-current={pathname === "/our-work" ? "page" : undefined}
+              aria-current={pathname === "/schedule" ? "page" : undefined}
             >
-              ALL OUR WORK
+              Schedule a Call
             </Link>
           </nav>
         </div>

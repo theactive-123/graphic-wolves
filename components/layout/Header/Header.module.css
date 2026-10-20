@@ -246,7 +246,7 @@
 
 .menuPanel.panelOpen {
   width: 430px;
-  height: 420px;
+  height: 514px;
   padding: 24px 26px 24px;
   border-radius: 18px;
   transform: translate(-8px, 2px) scale(1);
@@ -322,7 +322,7 @@
 
 .menuLinks {
   display: grid;
-  gap: 16px;
+  gap: 30px;
   margin-top: 27px;
   min-width: 378px;
   opacity: 0;
@@ -333,7 +333,7 @@
 .menuLinks a {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 2px;
   color: rgba(16, 16, 16, 0.56);
   text-decoration: none;
   font-family: "Borscha", Arial, sans-serif;
@@ -384,7 +384,7 @@
   place-items: center;
   min-width: 378px;
   min-height: 66px;
-  margin-top: 28px;
+  margin-top: 34px;
   border-radius: 17px;
   background: #111;
   color: #fff;
@@ -680,4 +680,11 @@ z-index: 30;
   .floatingWhatsApp svg {
     transition: none;
   }
+}
+
+:global(html:not([data-chat-visible="true"])) .floatingWhatsApp {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  animation-play-state: paused;
 }
