@@ -1,6 +1,6 @@
 const WP_API_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_API_URL ||
-  'https://lightsalmon-swallow-827714.hostingersite.com/wp-json/wp/v2';
+  'https://blue-zebra-943252.hostingersite.com/wp-json/wp/v2';
 
 export class WordPressAPIError extends Error {
   constructor(
