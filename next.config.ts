@@ -9,12 +9,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'lightsalmon-swallow-827714.hostingersite.com',
+        hostname: 'blue-zebra-943252.hostingersite.com',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: '*.lightsalmon-swallow-827714.hostingersite.com',
+        hostname: '*.blue-zebra-943252.hostingersite.com',
         pathname: '/**',
       },
     ],
