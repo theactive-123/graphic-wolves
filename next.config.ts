@@ -9,12 +9,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'blue-zebra-943252.hostingersite.com',
+        hostname: 'blogs.graphicwolves.com',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: '*.blue-zebra-943252.hostingersite.com',
+        hostname: '*.blogs.graphicwolves.com',
         pathname: '/**',
       },
     ],
