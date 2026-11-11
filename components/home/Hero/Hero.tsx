@@ -386,14 +386,14 @@ export default function Hero() {
         <h1
           id="home-hero-heading"
           className={styles.heading}
-          aria-label="Top-Notch Design and Development for Growing Businesses."
+          aria-label="Top-Notch Digital Design Agency for Growing Businesses."
         >
           <span className={styles.line}>
             <span className={styles.wordMask}>
               <span className={styles.wordInner}>Top-Notch</span>
             </span>
             <strong className={`${styles.wordMask} ${styles.team}`}>
-              <span className={styles.wordInner}>Design</span>
+              <span className={styles.wordInner}>Digital</span>
             </strong>
             <span className={styles.eyesMask} aria-hidden="true">
               <span className={styles.eyes} aria-hidden="true">
@@ -407,11 +407,11 @@ export default function Hero() {
             </span>
 
             <span className={styles.wordMask}>
-              <span className={styles.wordInner}>and</span>
+              <span className={styles.wordInner}>Design</span>
             </span>
             <strong className={styles.circleWrap}>
               <span className={styles.wordMask}>
-                <span className={styles.wordInner}>Development</span>
+                <span className={styles.wordInner}>Agency</span>
               </span>
               <svg
                 className={styles.circleSvg}

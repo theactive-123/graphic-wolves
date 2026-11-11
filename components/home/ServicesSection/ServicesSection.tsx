@@ -246,7 +246,7 @@ export default function ServicesSection() {
             Services
           </h2>
           <p ref={taglineRef} className={styles.tagline}>
-            High-impact Design and Development to build your brand and boost sales.
+            High-impact Digital Design Agency to build your brand and boost sales.
           </p>
 
           <div
