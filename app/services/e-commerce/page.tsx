@@ -8,16 +8,31 @@ import EcommerceProcessSection from "@/components/services/e-commerce/EcommerceP
 import EcommerceTechnologies from "@/components/services/e-commerce/EcommerceTechnologies/EcommerceTechnologies";
 import EcommerceFeaturedWork from "@/components/services/e-commerce/EcommerceFeaturedWork/EcommerceFeaturedWork";
 export const metadata: Metadata = {
-  title: { absolute: "Shopify Plus Agency | Graphic Wolves" },
+  title: { absolute: "Shopify E-Commerce Design & Development | Graphic Wolves" },
   description:
-    "Graphic Wolves is a Shopify Plus agency offering Shopify development, custom themes, e-commerce integrations, and conversion-focused store experiences.",
+    "Graphic Wolves offers Shopify development, custom themes, e-commerce integrations, and conversion-focused store experiences.",
   keywords: ["shopify plus agency","shopify development agency","ecommerce website design company","ecommerce development agency","shopify agency"],
   alternates: { canonical: "/services/e-commerce" },
 };
 export default function EcommercePage() {
 	return (
 		<main data-page="e-commerce">
-			<Header />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                { "@type": "Service", "@id": "https://graphicwolves.com/services/e-commerce#service",
+                  name: "Shopify E-Commerce Design and Development", url: "https://graphicwolves.com/services/e-commerce",
+                  serviceType: "E-Commerce Design and Development",
+                  description: "Shopify store setup, custom themes, app development, Shopify Plus solutions, and e-commerce integrations.",
+                  provider: { "@id": "https://graphicwolves.com/#organization" } },
+                { "@type": "BreadcrumbList", itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://graphicwolves.com/" },
+                  { "@type": "ListItem", position: 2, name: "Services", item: "https://graphicwolves.com/services" },
+                  { "@type": "ListItem", position: 3, name: "E-Commerce", item: "https://graphicwolves.com/services/e-commerce" },
+                ] },
+              ],
+            }) }} />
+            <Header />
 			<EcommerceHero />
             <EcommerceStatementSection />
 			<EcommerceProcessSection />

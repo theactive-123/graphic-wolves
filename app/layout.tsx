@@ -5,7 +5,6 @@ import "./globals.css";
 import BackToTopButton from "@/components/layout/BackToTopButton/BackToTopButton";
 import SmoothScroll from "@/components/layout/SmoothScroll/SmoothScroll";
 export const metadata: Metadata = {
-  // IMPORTANT: change this to your real production domain.
   metadataBase: new URL("https://graphicwolves.com"),
 
   title: {
@@ -67,6 +66,8 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://graphicwolves.com/#organization",
+  url: "https://graphicwolves.com",
   name: "Graphic Wolves",
   description:
     "Creative agency for branding, development and e-commerce.",

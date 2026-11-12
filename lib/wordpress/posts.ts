@@ -6,7 +6,7 @@ export async function getPosts(
   perPage = 10
 ): Promise<PaginatedResponse<WordPressPost>> {
   const { data, headers } = await wpFetch<WordPressPost[]>('/posts', {
-    params: { page, per_page: perPage, _embed: true },
+    params: { page, per_page: perPage, status: "publish", _embed: true },
   });
   return {
     data,
@@ -57,4 +57,19 @@ export async function getRelatedPosts(
     },
   });
   return data;
+}
+
+/** Enumerate every published post, including sites with more than 100 posts. */
+export async function getAllPublishedPosts(): Promise<WordPressPost[]> {
+  const first = await getPosts(1, 100);
+  const posts = [...first.data];
+  for (let page = 2; page <= first.totalPages; page++) {
+    posts.push(...(await getPosts(page, 100)).data);
+  }
+  return posts;
+}
+
+export function isIndexablePost(post: WordPressPost): boolean {
+  return post.status === 'publish' && !post.content.protected &&
+    post.yoast_head_json?.robots?.index !== 'noindex';
 }

@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header/Header";
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/schedule" },
   title: "Schedule a Call",
   description:
     "Choose a convenient time to talk with Graphic Wolves about your next project.",

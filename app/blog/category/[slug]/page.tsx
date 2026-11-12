@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const { slug } = await params;
   const category = await getCategoryBySlug(slug);
 
-  if (!category) return { title: 'Category Not Found | Graphic Wolves' };
+  if (!category) notFound();
 
   return {
-    title: `${category.name} Articles | Graphic Wolves Blog`,
+    title: { absolute: `${category.name} Articles | Graphic Wolves Blog` },
     description:
       category.description ||
       `Browse all articles in the ${category.name} category on Graphic Wolves Blog.`,

@@ -10,7 +10,8 @@ import AboutFaqSection from "@/components/about/AboutFaqSection/AboutFaqSection"
 import ProudClientsSection from "@/components/home/ProudClientsSection/ProudClientsSection";
 import FooterSection from "@/components/layout/Footer/FooterSection";
 export const metadata: Metadata = {
-  title: "About Us | Graphic Wolves",
+  alternates: { canonical: "/about" },
+  title: "About Us",
   description: "Meet Graphic Wolves, a creative and digital agency building lasting business value.",
 };
 

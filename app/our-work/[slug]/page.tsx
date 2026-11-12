@@ -17,9 +17,10 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
   const { slug } = await params;
   const study = getCaseStudy(slug);
 
-  if (!study) return { title: "Case Study Not Found" };
+  if (!study) notFound();
 
   return {
+    alternates: { canonical: `/our-work/${study.slug}` },
     title: study.title,
     description: study.caption,
   };

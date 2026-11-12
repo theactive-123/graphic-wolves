@@ -1,6 +1,3 @@
-# robots.txt — Graphic Wolves
-# Allow all crawlers, point search engines to the sitemap.
-
 User-agent: *
 Allow: /
 

@@ -6,7 +6,7 @@ import LegalContent from "@/components/legal/LegalContent/LegalContent";
 import styles from "./legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Graphic Wolves",
+  title: "Terms & Conditions",
   description:
     "The terms and conditions that govern the use of the Graphic Wolves website and services.",
   alternates: { canonical: "/terms-conditions" },

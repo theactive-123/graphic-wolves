@@ -75,6 +75,7 @@ export interface WordPressTag {
 }
 
 export interface WordPressPost {
+  yoast_head_json?: { robots?: { index?: string; follow?: string } };
   id: number;
   date: string;
   date_gmt: string;

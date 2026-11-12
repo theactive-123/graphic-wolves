@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header/Header';
 import FooterSection from '@/components/layout/Footer/FooterSection';
 import PostContent from '@/components/blog/PostContent/PostContent';
 import RecommendedArticles from '@/components/blog/RecommendedArticles/RecommendedArticles';
-import { getPostBySlug, getRelatedPosts } from '@/lib/wordpress/posts';
+import { getPostBySlug, getRelatedPosts, isIndexablePost } from '@/lib/wordpress/posts';
 import { getFeaturedImage, getPostCategories } from '@/lib/wordpress/types';
 import styles from './post.module.css';
 
@@ -34,15 +34,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params;
   const post = await getPostBySlug(slug);
 
-  if (!post) return { title: 'Post Not Found | Graphic Wolves' };
+  if (!post) notFound();
 
   const image = getFeaturedImage(post);
   const title = stripHtml(post.title.rendered) || 'Graphic Wolves Blog';
   const description = getBlogMetaDescription(post);
 
   return {
-    title: `${title} | Graphic Wolves Blog`,
+    title: { absolute: `${title} | Graphic Wolves Blog` },
     description,
+    ...(!isIndexablePost(post) && { robots: { index: false, follow: true } }),
     openGraph: {
       title: `${title} | Graphic Wolves Blog`,
       description,
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description,
       ...(image && { images: [image.source_url] }),
     },
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: { canonical: `/blog/${post.slug}` },
   };
 }
 

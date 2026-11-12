@@ -251,9 +251,9 @@ export default function EcommerceStatementSection() {
         />
 
         <div className={styles.corePanel}>
-          <p id="ecommerce-core-heading" className={styles.coreHeading}>
+          <h2 id="ecommerce-core-heading" className={styles.coreHeading}>
             Explore our core e-commerce development services.
-          </p>
+          </h2>
 
           <div className={styles.serviceGrid}>
             <article data-core-card className={styles.serviceCard}>

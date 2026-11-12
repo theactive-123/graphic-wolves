@@ -452,7 +452,7 @@ export default function FutureSection() {
             >
               <img
                 src="/images/future/card-1.webp"
-                alt="Graphic Wolves branding project"
+                alt="Brand identity design project by Graphic Wolves"
                 width={400}
                 height={340}
                 loading="lazy"
@@ -477,7 +477,7 @@ export default function FutureSection() {
             >
               <img
                 src="/images/future/card-2.webp"
-                alt="Graphic Wolves e-commerce project"
+                alt="Online store design project by Graphic Wolves"
                 width={400}
                 height={340}
                 loading="lazy"
@@ -502,7 +502,7 @@ export default function FutureSection() {
             >
               <img
                 src="/images/future/card-3.webp"
-                alt="Graphic Wolves creative digital project"
+                alt="Digital design project by Graphic Wolves"
                 width={400}
                 height={340}
                 loading="lazy"
@@ -527,7 +527,7 @@ export default function FutureSection() {
             >
               <img
                 src="/images/future/card-4.webp"
-                alt="Graphic Wolves development project"
+                alt="Website development project by Graphic Wolves"
                 width={400}
                 height={340}
                 loading="lazy"

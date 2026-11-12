@@ -10,7 +10,7 @@ import type { WordPressPost } from '@/lib/wordpress/types';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog | Graphic Wolves',
+  title: 'Blog',
   description:
     'Discover articles and tutorials on branding, web development, and e-commerce by Graphic Wolves.',
   openGraph: {

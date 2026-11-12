@@ -1,0 +1,12 @@
+{
+  "/contact-us.php": "/contact",
+  "/about-us.php": "/about",
+  "/logo-design.php": "/services/branding",
+  "/logo-package.php": "/services/branding",
+  "/website-development.php": "/services/web-development",
+  "/web-package.php": "/services/web-development",
+  "/ecommerce-package.php": "/services/e-commerce",
+  "/combo-package.php": "/services",
+  "/nft-design.php": "/services",
+  "/index.php": "/"
+}

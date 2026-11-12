@@ -9,7 +9,8 @@ import ProudClientsSection from "@/components/home/ProudClientsSection/ProudClie
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Contact | Graphic Wolves",
+  alternates: { canonical: "/contact" },
+  title: "Contact",
   description:
     "Get in touch with Graphic Wolves. Let’s talk about your next branding, design, development, or e-commerce project.",
 };

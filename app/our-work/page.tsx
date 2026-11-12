@@ -10,6 +10,7 @@ import AboutFaqSection from "@/components/about/AboutFaqSection/AboutFaqSection"
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/our-work" },
   title: "Our Work",
   description: "Explore selected Graphic Wolves branding, design, and digital projects.",
 };

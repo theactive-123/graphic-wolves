@@ -12,7 +12,7 @@ const services = [
   {
     title: "Web Development",
     description:
-      "fast, scroll-stopping websites built to convert, coded clean and tuned for the speeds google quietly rewards from first pixel to final deploy",
+      "fast, scroll-stopping websites built to convert, coded clean and tuned for performance from first pixel to final deploy",
     href: "/services/web-development",
     shellClass: styles.webShell,
     cardClass: styles.webCard,
