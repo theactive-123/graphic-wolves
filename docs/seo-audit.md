@@ -1,3 +1,5 @@
+> Follow-up status, fixes, and remaining hosting actions: [November 13 SEO status](seo-status.md). The report below records the original audit.
+
 # Technical SEO audit ? Graphic Wolves
 
 Reviewed November 12, 2026. Changes are local and have not been deployed.

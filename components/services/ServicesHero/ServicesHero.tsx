@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import styles from "./ServicesHero.module.css";
 
 const serviceImages = [
@@ -17,9 +19,9 @@ export default function ServicesHero() {
   return (
     <section className={styles.servicesHero} aria-labelledby="services-page-heading">
       <div className={styles.breadcrumb}>
-        <a href="/" className={styles.breadcrumbMuted}>
+        <Link href="/" className={styles.breadcrumbMuted}>
           Home
-        </a>
+        </Link>
         <span className={styles.breadcrumbDivider} aria-hidden="true" />
         <span className={styles.breadcrumbActive}>Our Services</span>
       </div>

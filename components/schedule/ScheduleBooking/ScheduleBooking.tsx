@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import Image from "next/image";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import styles from "./ScheduleBooking.module.css";
@@ -300,7 +302,7 @@ export default function ScheduleBooking() {
     <section className={styles.section} aria-label="Schedule a meeting">
       <div className={styles.bookingCard}>
         <aside className={styles.meetingInfo}>
-          <a className={styles.brand} href="/" aria-label="Graphic Wolves home">
+          <Link className={styles.brand} href="/" aria-label="Graphic Wolves home">
             <Image
               src="/images/graphic-logo.svg"
               alt="Graphic Wolves"
@@ -308,7 +310,7 @@ export default function ScheduleBooking() {
               height={48}
               priority
             />
-          </a>
+          </Link>
 
           <div className={styles.meetingCopy}>
             <p className={styles.host}>Graphic Wolves</p>
@@ -441,7 +443,7 @@ export default function ScheduleBooking() {
                             day: "numeric",
                             year: "numeric",
                           })}${available ? ", available" : ", unavailable"}`}
-                          aria-pressed={selected}
+                          aria-selected={selected}
                           role="gridcell"
                         >
                           {day}
@@ -623,9 +625,9 @@ export default function ScheduleBooking() {
                 <strong>{formatTime(selectedTime)} · {selectedDateLabel}</strong>
                 <span>{timezoneDisplay}</span>
               </div>
-              <a className={styles.homeLink} href="/">
+              <Link className={styles.homeLink} href="/">
                 Back to Graphic Wolves
-              </a>
+              </Link>
             </div>
           )}
 

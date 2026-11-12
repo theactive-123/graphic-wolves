@@ -180,7 +180,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
           </nav>
         </div>
 
-        <a className={styles.logo} href="/" aria-label="Graphic Wolves home page">
+        <Link className={styles.logo} href="/" aria-label="Graphic Wolves home page">
           <Image
             src="/images/graphic-logo.svg"
             alt="Graphic Wolves creative agency logo"
@@ -188,7 +188,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
             height={64}
             priority
           />
-        </a>
+        </Link>
 
         <div
           className={styles.whatsappShell}

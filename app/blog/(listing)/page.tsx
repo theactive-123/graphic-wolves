@@ -7,7 +7,7 @@ import BlogGrid from '@/components/blog/BlogGrid/BlogGrid';
 import { getPosts, getPostsByCategory } from '@/lib/wordpress/posts';
 import { getCategories } from '@/lib/wordpress/categories';
 import type { WordPressPost } from '@/lib/wordpress/types';
-import styles from './blog.module.css';
+import styles from '../blog.module.css';
 
 export const metadata: Metadata = {
   title: 'Blog',

@@ -1,21 +1,23 @@
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import http from 'node:http';
 import https from 'node:https';
 const require = createRequire(import.meta.url);
 require('@next/env').loadEnvConfig(process.cwd());
 const origin = 'https://graphicwolves.com';
-const base = process.env.SEO_BASE_URL || 'http://localhost:3100';
+const base = process.env.SEO_BASE_URL || (process.argv.includes('--live') ? origin : 'http://localhost:3100');
 const legacy = JSON.parse(readFileSync('lib/legacy-redirects.json', 'utf8'));
 const failures = [];
-const streamedNoindex = [];
+const hostingFindings = [];
 let checks = 0;
 function check(ok, message) { checks++; if (!ok) failures.push(message); }
 const cache = new Map();
 function request(path, headers = {}) {
   // Node fetch can override Host; raw HTTP lets us test the actual virtual host.
   const url = new URL(path, base);
+  // For remote runs, connect to the real hostname so TLS/SNI and CDN routing are tested too.
+  if (headers.host && !["localhost", "127.0.0.1"].includes(new URL(base).hostname)) url.hostname = headers.host;
   const transport = url.protocol === 'https:' ? https : http;
   return new Promise((resolve, reject) => {
     const req = transport.get(url, { headers: { 'user-agent': 'facebookexternalhit/1.1', ...headers } }, response => {
@@ -56,7 +58,7 @@ const expected = new Set();
 function collect(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.isDirectory() && !entry.name.includes('[') && entry.name !== 'api') collect(dir + '/' + entry.name);
-    if (entry.name === 'page.tsx') expected.add(origin + (dir.slice(3) || '/'));
+    if (entry.name === 'page.tsx') expected.add(origin + (dir.slice(3).replace(/\/\([^/]+\)/g, '') || '/'));
   }
 }
 collect('app');
@@ -111,13 +113,39 @@ check(www.status === 301 && www.location === origin + '/about?ref=host-check', '
 const robots = await request('/robots.txt');
 check(robots.status === 200 && robots.body.includes('Sitemap: ' + origin + '/sitemap.xml'), 'robots sitemap reference');
 check(!/Disallow:\s*\//i.test(robots.body), 'robots blocks public pages');
+const agents = [
+  'Mozilla/5.0 SEO validation',
+  'Googlebot/2.1 (+http://www.google.com/bot.html)',
+  'facebookexternalhit/1.1',
+];
 for (const path of ['/missing-seo-route', '/our-work/missing-seo-study', '/blog/missing-seo-post', '/blog/category/missing-seo-category']) {
-  const result = await request(path);
-  // The existing blog/loading.tsx streams its shell before a missing post/category is known.
-  const streamed = path.startsWith('/blog/') && result.status === 200;
-  if (streamed) streamedNoindex.push(path);
-  check(result.status === 404 || streamed, path + ': expected 404 or streamed noindex');
-  check(/noindex/.test(result.body), path + ': expected noindex');
+  for (const agent of agents) {
+    const result = await request(path, { 'user-agent': agent });
+    check(result.status === 404, path + ': expected HTTP 404 for ' + agent + ', got ' + result.status);
+    check(/noindex/.test(result.body), path + ': expected noindex for ' + agent);
+  }
 }
-console.log(JSON.stringify({ checks, sitemapUrls: urls.length, caseStudies: studies.length, publishedPosts: posts.length, categories: categories.length, internalLinks: links.size, streamedNoindex, failures }, null, 2));
+if (!["localhost", "127.0.0.1"].includes(new URL(base).hostname)) {
+  for (const [source, destination] of Object.entries(legacy)) {
+    for (const host of ['graphicwolves.com', 'www.graphicwolves.com']) {
+      let url = 'http://' + host + source + '?utm_source=seo-check&ref=legacy';
+      const hops = [];
+      let result;
+      for (let hop = 0; hop < 4; hop++) {
+        result = await request(url);
+        if (result.status < 300 || result.status >= 400 || !result.location) break;
+        hops.push({ status: result.status, location: result.location });
+        url = new URL(result.location, url).href;
+      }
+      check(result?.status === 200 && url === origin + destination + '?utm_source=seo-check&ref=legacy', host + source + ': HTTP redirect does not reach the correct 200 destination');
+      const direct = hops.length === 1 && hops[0]?.status === 301;
+      check(direct, 'http://' + host + source + ': expected one 301 hop to the final HTTPS URL');
+      if (!direct) hostingFindings.push({ source: 'http://' + host + source, hops });
+    }
+  }
+}
+const result = { checkedAt: new Date().toISOString(), target: base, checks, sitemapUrls: urls.length, caseStudies: studies.length, publishedPosts: posts.length, categories: categories.length, internalLinks: links.size, hostingFindings, failures };
+const output = process.argv.find(arg => arg.startsWith('--output='))?.slice('--output='.length);
+if (output) writeFileSync(output, JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result, null, 2));
 if (failures.length) process.exitCode = 1;

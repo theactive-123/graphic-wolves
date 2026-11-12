@@ -1,0 +1,283 @@
+{
+  "checks": 486,
+  "sitemapUrls": 31,
+  "caseStudies": 10,
+  "publishedPosts": 5,
+  "categories": 4,
+  "internalLinks": 30,
+  "hostingFindings": [
+    {
+      "source": "http://graphicwolves.com/contact-us.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/contact-us.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/contact?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/contact-us.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/contact-us.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/contact?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/about-us.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/about-us.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/about?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/about-us.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/about-us.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/about?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/logo-design.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/logo-design.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/branding?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/logo-design.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/logo-design.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/branding?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/logo-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/logo-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/branding?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/logo-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/logo-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/branding?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/website-development.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/website-development.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/web-development?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/website-development.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/website-development.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/web-development?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/web-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/web-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/web-development?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/web-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/web-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/web-development?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/ecommerce-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/ecommerce-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/e-commerce?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/ecommerce-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/ecommerce-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services/e-commerce?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/combo-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/combo-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/combo-package.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/combo-package.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/nft-design.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/nft-design.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/nft-design.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/nft-design.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/services?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://graphicwolves.com/index.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/index.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    },
+    {
+      "source": "http://www.graphicwolves.com/index.php",
+      "hops": [
+        {
+          "status": 301,
+          "location": "https://www.graphicwolves.com/index.php?utm_source=seo-check&ref=legacy"
+        },
+        {
+          "status": 301,
+          "location": "https://graphicwolves.com/?utm_source=seo-check&ref=legacy"
+        }
+      ]
+    }
+  ],
+  "failures": [
+    "/missing-seo-route: expected HTTP 404 for Googlebot/2.1 (+http://www.google.com/bot.html), got 403",
+    "/missing-seo-route: expected noindex for Googlebot/2.1 (+http://www.google.com/bot.html)",
+    "/blog/missing-seo-post: expected HTTP 404 for Mozilla/5.0 SEO validation, got 200",
+    "/blog/missing-seo-post: expected HTTP 404 for Googlebot/2.1 (+http://www.google.com/bot.html), got 403",
+    "/blog/missing-seo-post: expected noindex for Googlebot/2.1 (+http://www.google.com/bot.html)",
+    "/blog/missing-seo-post: expected HTTP 404 for facebookexternalhit/1.1, got 200",
+    "/blog/category/missing-seo-category: expected HTTP 404 for Mozilla/5.0 SEO validation, got 200",
+    "/blog/category/missing-seo-category: expected HTTP 404 for Googlebot/2.1 (+http://www.google.com/bot.html), got 403",
+    "/blog/category/missing-seo-category: expected noindex for Googlebot/2.1 (+http://www.google.com/bot.html)",
+    "/blog/category/missing-seo-category: expected HTTP 404 for facebookexternalhit/1.1, got 200"
+  ],
+  "checkedAt": "2026-11-12T18:48:09.228Z"
+}
