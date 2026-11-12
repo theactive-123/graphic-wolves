@@ -35,7 +35,7 @@ export default function ServicesHero() {
               style={{ "--card-rotation": `${image.rotate}deg` } as React.CSSProperties}
               aria-hidden={index >= serviceImages.length}
             >
-              <img src={image.src} alt={index < serviceImages.length ? image.alt : ""} draggable={false} />
+              <img src={image.src} alt={image.alt} draggable={false} />
             </div>
           ))}
         </div>

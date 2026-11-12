@@ -177,12 +177,12 @@ export default function EcommerceProcessSection() {
                     <img
                       className={styles.layerLight}
                       src="/images/services/ecommerce/process-images/light.svg"
-                      alt=""
+                      alt="Light layer of the ecommerce process illustration"
                     />
                     <img
                       className={styles.layerDark}
                       src="/images/services/ecommerce/process-images/dark.png"
-                      alt=""
+                      alt="Dark layer of the ecommerce process illustration"
                     />
                   </span>
                 ))}

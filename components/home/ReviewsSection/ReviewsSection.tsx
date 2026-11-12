@@ -639,7 +639,7 @@ export default function ReviewsSection({
 
           <img
             src="/images/reviews/thumb-sticker.svg"
-            alt=""
+            alt="Thumbs-up sticker"
             className={
               styles.headingSticker
             }
@@ -695,7 +695,7 @@ export default function ReviewsSection({
                     <img
                       key={src}
                       src={src}
-                      alt=""
+                      alt="Client brand logo"
                       width={180}
                       height={90}
                       loading="lazy"
@@ -780,7 +780,7 @@ export default function ReviewsSection({
 
                       <img
                         src="/images/reviews/verified-badge.svg"
-                        alt=""
+                        alt="Verified review badge"
                         className={
                           styles.verified
                         }

@@ -229,7 +229,7 @@ export default function EcommerceStatementSection() {
               <img
                 ref={iconRef}
                 src="/images/services/branding/brand-icon.svg"
-                alt=""
+                alt="Brand identity illustration"
                 className={styles.icon}
                 aria-hidden="true"
               />
@@ -246,7 +246,7 @@ export default function EcommerceStatementSection() {
         <img
           className={styles.orangeIcon}
           src="/images/services/ecommerce/Vector.svg"
-          alt=""
+          alt="Orange ecommerce illustration"
           aria-hidden="true"
         />
 

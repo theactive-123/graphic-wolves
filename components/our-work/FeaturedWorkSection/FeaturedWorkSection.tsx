@@ -605,7 +605,7 @@ export default function FeaturedWorkSection() {
         <img
           data-feature-vector
           src="/images/featured/vectors/green-shape.svg"
-          alt=""
+          alt="Green abstract shape"
           className={
             styles.greenShape
           }
@@ -680,7 +680,7 @@ export default function FeaturedWorkSection() {
         <img
           data-feature-vector
           src="/images/featured/vectors/green-small.svg"
-          alt=""
+          alt="Small green abstract shape"
           className={
             styles.greenSmall
           }
@@ -693,7 +693,7 @@ export default function FeaturedWorkSection() {
         <img
           data-feature-vector
           src="/images/featured/vectors/purple-shape.svg"
-          alt=""
+          alt="Purple abstract shape"
           className={
             styles.purpleShape
           }

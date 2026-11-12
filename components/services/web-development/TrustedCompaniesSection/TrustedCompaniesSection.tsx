@@ -400,7 +400,7 @@ export default function TrustedCompaniesSection() {
       >
         <img
           src="/images/services/web-development/clients/purple-decor.svg"
-          alt=""
+          alt="Purple decorative graphic"
         />
       </div>
     </section>

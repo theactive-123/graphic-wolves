@@ -958,7 +958,7 @@ export default function FooterSection() {
                           src={
                             social.icon
                           }
-                          alt=""
+                          alt={social.label + " logo"}
                           width={42}
                           height={41}
                           draggable={false}

@@ -342,7 +342,7 @@ export default function HorizontalWords() {
           >
             <img
               src="/images/horizontal/watch.svg"
-              alt=""
+              alt="Watch sticker"
               aria-hidden="true"
             />
           </div>
@@ -355,7 +355,7 @@ export default function HorizontalWords() {
           >
             <img
               src="/images/horizontal/cursor.svg"
-              alt=""
+              alt="Cursor arrow sticker"
               aria-hidden="true"
             />
           </div>
@@ -368,7 +368,7 @@ export default function HorizontalWords() {
           >
             <img
               src="/images/horizontal/phone.svg"
-              alt=""
+              alt="Phone sticker"
               aria-hidden="true"
             />
           </div>

@@ -195,7 +195,7 @@ export default function WebDevelopmentHero() {
                     <div className={styles.imageCard}>
                       <img
                         src={card.image}
-                        alt={card.alt || ""}
+                        alt={card.alt || "Website design project by Graphic Wolves"}
                         className={styles.cardImage}
                       />
                     </div>

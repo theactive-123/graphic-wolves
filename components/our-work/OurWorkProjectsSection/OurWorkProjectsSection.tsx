@@ -9,6 +9,7 @@ import styles from "./OurWorkProjectsSection.module.css";
 
 const projects = caseStudies.map((study) => ({
   name: study.title,
+  alt: study.heroMedia.alt,
   image:
     study.heroMedia.type === "image"
       ? study.heroMedia.src
@@ -31,7 +32,7 @@ function ProjectRow({ reverse = false }: { reverse?: boolean }) {
                 key={`${project.name}-${project.image}-${index}`}
               >
                 <span className={styles.imageWrap}>
-                  <Image src={project.image} alt="" fill
+                  <Image src={project.image} alt={project.alt} fill
                     sizes="(max-width: 700px) 50vw, 33vw"
                     loading="lazy" decoding="async" draggable={false} />
                 </span>

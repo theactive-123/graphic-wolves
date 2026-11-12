@@ -102,7 +102,7 @@ export default function EcommerceFeaturedWork() {
       <img
         className={styles.pinkSwirl}
         src="/images/services/ecommerce/pinkswirl.svg"
-        alt=""
+        alt="Pink swirl illustration"
         aria-hidden="true"
       />
       <div className={styles.inner}>

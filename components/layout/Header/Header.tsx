@@ -91,7 +91,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
               <Image
                 className={styles.menuIcon}
                 src="/images/menu-swirl.svg"
-                alt=""
+                alt="Menu swirl icon"
                 width={48}
                 height={48}
                 priority
@@ -108,7 +108,7 @@ export default function Header({ variant = "default" }: { variant?: "default" | 
             <div className={styles.panelTopRow}>
               <div className={styles.panelBrand}>
                 <span className={styles.panelRing} aria-hidden="true">
-                  <Image src="/images/menu-swirl.svg" alt="" width={48} height={48} />
+                  <Image src="/images/menu-swirl.svg" alt="Menu swirl icon" width={48} height={48} />
                 </span>
                 <span>Menu</span>
               </div>

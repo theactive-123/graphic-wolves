@@ -285,7 +285,7 @@ export default function ServicesSection() {
                     >
                       <img
                         src={service.icon}
-                        alt=""
+                        alt={service.title + " illustration"}
                       />
                     </div>
                   </Link>

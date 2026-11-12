@@ -359,7 +359,7 @@ export default function FutureSection() {
     >
       <img
         src="/images/future/ellipse-3.webp"
-        alt=""
+        alt="Circular background graphic"
         width={240}
         height={240}
         loading="lazy"
@@ -385,7 +385,7 @@ export default function FutureSection() {
 
               <img
                 src="/images/future/heading-sticker.svg"
-                alt=""
+                alt="Creative design heading sticker"
                 aria-hidden="true"
                 width={120}
                 height={80}
@@ -427,7 +427,7 @@ export default function FutureSection() {
         <div className={styles.cardsArea}>
           <img
             src="/images/future/bg-vector.svg"
-            alt=""
+            alt="Abstract background illustration"
             aria-hidden="true"
             width={760}
             height={520}

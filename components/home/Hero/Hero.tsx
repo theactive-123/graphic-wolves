@@ -357,7 +357,7 @@ export default function Hero() {
           <img
             ref={loaderLogoRef}
             src="/images/graphic-logo.svg"
-            alt=""
+            alt="Graphic Wolves creative agency logo"
             width={290}
             height={64}
             className={styles.loaderLogo}

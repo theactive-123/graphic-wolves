@@ -222,7 +222,7 @@ export default function BrandStatementSection() {
             <img
               ref={iconRef}
               src="/images/services/branding/brand-icon.svg"
-              alt=""
+              alt="Brand identity illustration"
               className={styles.icon}
               aria-hidden="true"
             />

@@ -107,7 +107,7 @@ export default function FeaturedWorkSection() {
       <img
         className={styles.orangeIcon}
         src="/images/services/web-development/featured-work/orange-icon.svg"
-        alt=""
+        alt="Orange featured work illustration"
         aria-hidden="true"
       />
 

@@ -273,7 +273,7 @@ export default function ToolsTechnologiesSection() {
       >
         <img
           src="/images/services/branding/tools/green-decor.svg"
-          alt=""
+          alt="Green decorative graphic"
         />
       </div>
     </section>

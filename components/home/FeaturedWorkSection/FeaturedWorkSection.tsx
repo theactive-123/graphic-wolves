@@ -175,7 +175,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
 
         <img
           src="/images/featured/vectors/green-shape.svg"
-          alt=""
+          alt="Green abstract shape"
           width={270}
           height={170}
           loading="lazy"
@@ -259,7 +259,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
 
         <img
           src="/images/featured/vectors/green-small.svg"
-          alt=""
+          alt="Small green abstract shape"
           width={95}
           height={95}
           loading="lazy"
@@ -275,7 +275,7 @@ export default function FeaturedWorkSection({ noOverlap = false }: { noOverlap?:
 
         <img
           src="/images/featured/vectors/purple-shape.svg"
-          alt=""
+          alt="Purple abstract shape"
           width={390}
           height={220}
           loading="lazy"

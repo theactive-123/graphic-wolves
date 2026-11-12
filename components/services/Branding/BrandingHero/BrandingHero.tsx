@@ -479,7 +479,7 @@ export default function BrandingHero() {
             >
               <img
                 src={image}
-                alt=""
+                alt="Brand identity design project by Graphic Wolves"
                 draggable={false}
               />
             </div>
