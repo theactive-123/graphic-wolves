@@ -596,7 +596,7 @@ export default function FutureSection() {
 
         <div className={styles.description}>
           <p>
-            Expert Design and Development by a tight crew who move fast and sweat the details.
+            Expert Digital Design Agency by a tight crew who move fast and sweat the details.
           </p>
         </div>
       </div>

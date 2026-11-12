@@ -404,7 +404,7 @@ export default function HorizontalWords() {
         {/* CAPTION */}
         <div className={styles.bottomText}>
           <p>
-            Expert Design and Development ensures your brand stands out wherever your audience scrolls, taps, or shops
+            Expert Digital Design Agency ensures your brand stands out wherever your audience scrolls, taps, or shops
           </p>
         </div>
       </div>

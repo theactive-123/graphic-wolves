@@ -11,8 +11,11 @@ import ProudClientsSection from "@/components/home/ProudClientsSection/ProudClie
 import FooterSection from "@/components/layout/Footer/FooterSection";
 
 export const metadata: Metadata = {
-  title: { absolute: "Branding, Web Development & E-Commerce | Graphic Wolves" },
-  description: "Explore Graphic Wolves branding, custom web development, and e-commerce services, with selected projects and ways to discuss your next project.",
+  title: {
+    absolute: "Top Digital Design Agency | Graphic Wolves",
+  },
+  description:
+    "Elevate your brand with a top Digital Design Agency. Graphic Wolves delivers standout graphic design, branding, and website development services.",
   alternates: { canonical: "/" },
 };
 

@@ -580,7 +580,7 @@ export default function ReviewsSection({
           <br />
           {" "}
           <strong className={styles.designDevelopment}>
-            Design and Development
+            Digital Design Agency
           </strong>
           {" "}
           <br />
