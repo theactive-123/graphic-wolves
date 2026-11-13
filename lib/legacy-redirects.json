@@ -8,5 +8,10 @@
   "/ecommerce-package.php": "/services/e-commerce",
   "/combo-package.php": "/services",
   "/nft-design.php": "/services",
+  "/branding.php": "/services/branding",
+  "/animation.php": "/services/branding",
+  "/refund-policy.php": "/privacy-policy",
+  "/seo.php": "/services/web-development",
+  "/illustration-package.php": "/services/branding",
   "/index.php": "/"
 }
