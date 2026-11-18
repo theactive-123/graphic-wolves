@@ -2,8 +2,20 @@ import type { NextConfig } from "next";
 
 import legacyRedirects from "./lib/legacy-redirects.json";
 
+// Payment portal that serves this brand's invoice pages. Customers see
+// https://graphicwolves.com/pay/... while the portal handles the payment.
+const PAYMENT_PORTAL_URL = (process.env.PAYMENT_PORTAL_URL || "https://payment-portal-pi.vercel.app").replace(/\/+$/, "");
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return {
+      // Forward /pay/* (invoice pages, checkout, verification) to the portal.
+      beforeFiles: [{ source: "/pay/:path*", destination: `${PAYMENT_PORTAL_URL}/pay/:path*` }],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
   async redirects() {
     return [
       // Explicit 301: permanent: true would produce a 308. Queries pass through.
